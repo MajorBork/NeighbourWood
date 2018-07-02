@@ -6,10 +6,7 @@ using UnityEngine.UI;
 public class DialogueCollider : MonoBehaviour
 {
     public GameObject dialogueManager;
-    public Text name;
-    public Text dialogueBox;
-    public Text startConversationText;
-    public Text continuetext;
+    public GameObject dialogueBox;
     public Collider dialoguecol;
 	void Start () // Use this for initialization
     {
@@ -19,22 +16,35 @@ public class DialogueCollider : MonoBehaviour
     {
         //dialoguecol = GameObject.GetComponent<BoxCollider>();
 	}
+    //Subscribes to our game events
+    void OnEnable()
+    {
+        GameEvents.OnGameStateChange += OnGameStateChange;
+    }
+    //Unsubscribes to our game events
+    void OnDisable()
+    {
+        GameEvents.OnGameStateChange -= OnGameStateChange;
+    }
+    void OnGameStateChange(GameState gamestate)
+    {
+        if (GameManager.instance.gameState == GameState.Dialogue)
+        {
+            dialogueBox.SetActive(false);
+        }
+    }
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            name.enabled = true;
-            dialogueBox.enabled = true;
-            startConversationText.enabled = true;
-            continuetext.enabled = true;
-            dialogueManager.SetActive(true);
+            GameEvents.ReportGameStateChange(GameState.Dialogue);
         }
     }
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-
+            GameEvents.ReportGameStateChange(GameState.FreeRoam);
         }
     }
 }

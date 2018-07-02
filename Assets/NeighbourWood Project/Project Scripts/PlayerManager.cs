@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
 
-public class PlayerManager : MonoBehaviour
+public enum Vision
 {
+    Normal,
+    Smell,
+}
+
+public class PlayerManager : Singleton<PlayerManager>
+{
+    public Vision vision;
     GameObject player;
     GameObject playerCamera;
-    PostProcessingBehaviour smellOVision;
+    public PostProcessingBehaviour smellOVision;
     public int forwardSpeed = 10;
     public int backwardSpeed = 10;
     public int leftSpeed = 10;
@@ -17,12 +24,30 @@ public class PlayerManager : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         playerCamera = GameObject.FindWithTag("MainCamera");
         smellOVision = GetComponentInChildren<PostProcessingBehaviour>();
+        smellOVision.enabled = false;
+        vision = Vision.Normal;
     }
 	void Update () // Update is called once per frame
     {
-        MovementController();
-        VisionController();
+        switch (GameManager.instance.gameState)
+        {
+            case GameState.FreeRoam:
+                MovementController();
+                VisionController();
+                break;
+            case GameState.Dialogue:
+                break;
+            case GameState.CreditScreen:
+                break;
+            case GameState.PauseScreen:
+                break;
+            case GameState.TitleScreen:
+                break;
+            default: break;
+        }
     }
+
+    #region controls
     void MovementController()
     {
         if (Input.GetKey(KeyCode.W))
@@ -46,7 +71,36 @@ public class PlayerManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.N))
         {
-            //smellOVision.SetActive(false);
+            if (vision == Vision.Normal)
+                vision = Vision.Smell;
+            else
+                vision = Vision.Normal;
+            GameEvents.ReportVisionChange(vision);
+            
         }
+    }
+    void DialogueController()
+    {
+
+    }
+
+    #endregion
+    //Subscribes to our game events
+    void OnEnable()
+    {
+        GameEvents.OnVisionChange += OnVisionChange;
+    }
+    //Unsubscribes to our game events
+    void OnDisable()
+    {
+        GameEvents.OnVisionChange -= OnVisionChange;
+    }
+    void OnVisionChange(Vision vision)
+    {
+        //Debug.Log("vision mode");
+        if (vision == Vision.Normal)
+            smellOVision.enabled = false;
+        else
+            smellOVision.enabled = true;
     }
 }

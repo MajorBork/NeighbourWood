@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueManager : MonoBehaviour
+
+
+public class DialogueManager : Singleton<DialogueManager>
 {
     public Text nameText;
     public Text dialogueText;
@@ -12,6 +14,7 @@ public class DialogueManager : MonoBehaviour
     {
         sentences = new Queue<string>();
     }
+
     public void StartDialogue(Dialogue dialogue)
     {
         nameText.text = dialogue.name;
@@ -36,5 +39,6 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         Debug.Log("End of converstion.");
+        GameEvents.ReportGameStateChange(GameState.FreeRoam);
     }
 }
