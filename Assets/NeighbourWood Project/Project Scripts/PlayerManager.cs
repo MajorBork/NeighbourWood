@@ -8,7 +8,11 @@ public class PlayerManager : MonoBehaviour
     GameObject player;
     GameObject playerCamera;
     PostProcessingBehaviour smellOVision;
-	void Start () // Use this for initialization
+    public int forwardSpeed = 10;
+    public int backwardSpeed = 10;
+    public int leftSpeed = 10;
+    public int rightSpeed = 10;
+    void Start () // Use this for initialization
     {
         player = GameObject.FindWithTag("Player");
         playerCamera = GameObject.FindWithTag("MainCamera");
@@ -21,28 +25,28 @@ public class PlayerManager : MonoBehaviour
     }
     void MovementController()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
-            transform.position += Vector3.forward * Time.deltaTime;
+            transform.position += Vector3.forward * Time.deltaTime * forwardSpeed;
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
-            transform.position += Vector3.left * Time.deltaTime;
+            transform.position += Vector3.left * Time.deltaTime * leftSpeed;
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
-            transform.position += Vector3.right * Time.deltaTime;
+            transform.position += Vector3.right * Time.deltaTime * rightSpeed;
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
-            transform.position += Vector3.back * Time.deltaTime;
+            transform.position += Vector3.back * Time.deltaTime * backwardSpeed;
         }
     }
     void VisionController()
     {
         if (Input.GetKeyDown(KeyCode.N))
         {
-            smellOVision.SetActive(false);
+            //smellOVision.SetActive(false);
         }
     }
 }
