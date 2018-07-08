@@ -103,4 +103,5 @@ public class PlayerManager : Singleton<PlayerManager>
         else
             smellOVision.enabled = true;
     }
+   
 }

@@ -6,11 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Base/Scenes/SecurityRoom.unity
-    guid: fa8464330437a6c439e767c377bbee1d
-  - enabled: 1
-    path: Assets/Base/Scenes/Market.unity
-    guid: 3020f6f7c8ece2f4da9fa9ca87063961
-  - enabled: 1
-    path: Assets/Base/Scenes/Persistent.unity
-    guid: ef18a6fcc8276e541a14d91f5fb2d496
+    path: Assets/NeighbourWood Project/Project Scene/TestScene.unity
+    guid: 5a57e13ef5c4d654998746fe0947a25f
+  m_configObjects: {}

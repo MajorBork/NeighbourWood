@@ -10,6 +10,7 @@ public class DialogueManager : Singleton<DialogueManager>
     public Text nameText;
     public Text dialogueText;
     private Queue<string> sentences;
+    public GameState gameState;
     void Start() // Use this for initialization
     {
         sentences = new Queue<string>();
@@ -39,6 +40,10 @@ public class DialogueManager : Singleton<DialogueManager>
     public void EndDialogue()
     {
         Debug.Log("End of converstion.");
+        if (gameState == GameState.Dialogue)
+        {
+            gameState = GameState.FreeRoam;
+        }
         GameEvents.ReportGameStateChange(GameState.FreeRoam);
     }
 }

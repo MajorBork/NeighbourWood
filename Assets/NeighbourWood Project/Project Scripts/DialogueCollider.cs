@@ -8,13 +8,14 @@ public class DialogueCollider : MonoBehaviour
     public GameObject dialogueManager;
     public GameObject dialogueBox;
     public Collider dialoguecol;
-	void Start () // Use this for initialization
+    public GameState gameState;
+    void Start () // Use this for initialization
     {
 		
 	}
 	void Update () // Update is called once per frame
     {
-        //dialoguecol = GameObject.GetComponent<BoxCollider>();
+
 	}
     //Subscribes to our game events
     void OnEnable()
@@ -30,6 +31,12 @@ public class DialogueCollider : MonoBehaviour
     {
         if (GameManager.instance.gameState == GameState.Dialogue)
         {
+            Debug.Log("working");
+            dialogueBox.SetActive(true);
+        }
+        if (GameManager.instance.gameState == GameState.FreeRoam)
+        {
+            Debug.Log("working");
             dialogueBox.SetActive(false);
         }
     }
@@ -37,7 +44,16 @@ public class DialogueCollider : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (gameState == GameState.FreeRoam)
+            {
+                gameState = GameState.Dialogue;
+            }
+            else
+            {
+                gameState = GameState.FreeRoam;
+            }
             GameEvents.ReportGameStateChange(GameState.Dialogue);
+            Debug.Log("working");
         }
     }
     void OnTriggerExit(Collider other)
@@ -45,6 +61,7 @@ public class DialogueCollider : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameEvents.ReportGameStateChange(GameState.FreeRoam);
+            Debug.Log("working");
         }
     }
 }

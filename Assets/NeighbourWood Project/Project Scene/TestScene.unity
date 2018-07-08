@@ -706,6 +706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameText: {fileID: 1571413666}
   dialogueText: {fileID: 1785720921}
+  gameState: 0
 --- !u!4 &612214228
 Transform:
   m_ObjectHideFlags: 0
@@ -841,7 +842,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -3, y: 78.2}
+  m_AnchoredPosition: {x: -3, y: 57}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1147256506
@@ -1616,6 +1617,26 @@ Prefab:
       propertyPath: continuetext
       value: 
       objectReference: {fileID: 1832796161}
+    - target: {fileID: 65904939679012036, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 2.2621727
+      objectReference: {fileID: 0}
+    - target: {fileID: 65904939679012036, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 0.63108635
+      objectReference: {fileID: 0}
+    - target: {fileID: 65904939679012036, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 5.771818
+      objectReference: {fileID: 0}
+    - target: {fileID: 65904939679012036, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: m_Center.x
+      value: -0.6256908
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
   m_IsPrefabParent: 0

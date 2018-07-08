@@ -11,7 +11,6 @@ public static class GameEvents
 
     //Events
     #region Events
-
     public static void ReportVisionChange(Vision vision)
     {
         //Debug.Log (">>> EVENT: ReportOnVisionChange((" + vision +")");
@@ -26,12 +25,9 @@ public static class GameEvents
     }
     public static void ReportGameStateChange(GameState gamestate)
     {
-        //Debug.Log (">>> EVENT: ReportOnDialogueChange((" + vision +")");
+        //Debug.Log (">>> EVENT: ReportOnDialogueChange((" + game +")");
         if (OnGameStateChange != null)
             OnGameStateChange(gamestate);
     }
-
-
-
     #endregion
 }
