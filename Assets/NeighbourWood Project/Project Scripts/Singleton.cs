@@ -15,7 +15,7 @@ public class Singleton <T>:MonoBehaviour where T:MonoBehaviour
                 if (instance_ == null)
                 {
                     GameObject singleton = new GameObject(typeof(T).Name);
-                    singleton.AddComponent<T>(); // AwakeAwake gets gets called called inside AddComponent
+                    singleton.AddComponent<T>(); // Awake gets called inside AddComponent
                 }
             }
             return instance_;

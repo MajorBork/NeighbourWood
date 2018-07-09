@@ -15,12 +15,11 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         sentences = new Queue<string>();
     }
-
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(DialogueSentences dialogueSentences)
     {
-        nameText.text = dialogue.name;
+        nameText.text = dialogueSentences.name;
         sentences.Clear();
-        foreach (string sentence in dialogue.sentences)
+        foreach (string sentence in dialogueSentences.sentences)
         {
             sentences.Enqueue(sentence);
         }

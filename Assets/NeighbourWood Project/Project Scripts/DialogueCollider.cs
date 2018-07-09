@@ -47,12 +47,13 @@ public class DialogueCollider : MonoBehaviour
             if (gameState == GameState.FreeRoam)
             {
                 gameState = GameState.Dialogue;
+                GameEvents.ReportGameStateChange(GameState.Dialogue);
             }
             else
             {
                 gameState = GameState.FreeRoam;
+                GameEvents.ReportGameStateChange(GameState.FreeRoam);
             }
-            GameEvents.ReportGameStateChange(GameState.Dialogue);
             Debug.Log("working");
         }
     }

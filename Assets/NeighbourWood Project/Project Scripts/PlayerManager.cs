@@ -36,6 +36,7 @@ public class PlayerManager : Singleton<PlayerManager>
                 VisionController();
                 break;
             case GameState.Dialogue:
+                DialogueController();
                 break;
             case GameState.CreditScreen:
                 break;

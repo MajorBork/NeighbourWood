@@ -14,10 +14,8 @@ public enum GameState
 
 public class GameManager : Singleton<GameManager>
 {
-    public int score = 0;
-    public int lives;
-    public float timer = 100;
-
+    public int foodLevel;
+    public ItemType itemType;
     public GameState gameState;
     
     void Start()
@@ -26,25 +24,7 @@ public class GameManager : Singleton<GameManager>
     }
     void Update()
     {
-        timer -= Time.deltaTime;
-    }
-    //Subscribes to our game events
-    void OnEnable()
-    {
-        //GameEvents.OnEnemyHit += OnEnemyHit;
-    }
-
-    //Unsubscribes to our game events
-    void OnDisable()
-    {
-        //GameEvents.OnEnemyHit -= OnEnemyHit;
-    }
-
-    void OnEnemyHit()
-    {
-        score += 10;
-        timer += 1;
+        
     }
     
-
 }

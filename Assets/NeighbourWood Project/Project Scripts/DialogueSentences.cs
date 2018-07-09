@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueSentences : MonoBehaviour {
+[System.Serializable]
+public class DialogueSentences
+{
+    public string name;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    [TextArea(3, 10)]
+    public string[] sentences;
 }
