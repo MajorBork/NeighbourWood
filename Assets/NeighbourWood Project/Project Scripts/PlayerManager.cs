@@ -11,6 +11,7 @@ public enum Vision
 
 public class PlayerManager : Singleton<PlayerManager>
 {
+    #region Variables
     public Vision vision;
     GameObject player;
     GameObject playerCamera;
@@ -19,7 +20,9 @@ public class PlayerManager : Singleton<PlayerManager>
     public int backwardSpeed = 10;
     public int leftSpeed = 10;
     public int rightSpeed = 10;
-    void Start () // Use this for initialization
+    #endregion
+    #region Start and Update Methods
+    void Start() // Use this for initialization
     {
         player = GameObject.FindWithTag("Player");
         playerCamera = GameObject.FindWithTag("MainCamera");
@@ -27,7 +30,7 @@ public class PlayerManager : Singleton<PlayerManager>
         smellOVision.enabled = false;
         vision = Vision.Normal;
     }
-	void Update () // Update is called once per frame
+    void Update() // Update is called once per frame
     {
         switch (GameManager.instance.gameState)
         {
@@ -47,8 +50,8 @@ public class PlayerManager : Singleton<PlayerManager>
             default: break;
         }
     }
-
-    #region controls
+    #endregion
+    #region Control Methods
     void MovementController()
     {
         if (Input.GetKey(KeyCode.W))
@@ -73,26 +76,27 @@ public class PlayerManager : Singleton<PlayerManager>
         if (Input.GetKeyDown(KeyCode.N))
         {
             if (vision == Vision.Normal)
+            {
                 vision = Vision.Smell;
+            }
             else
+            {
                 vision = Vision.Normal;
+            }
             GameEvents.ReportVisionChange(vision);
-            
         }
     }
     void DialogueController()
     {
 
     }
-
     #endregion
-    //Subscribes to our game events
-    void OnEnable()
+    #region OnVisionChange Event Methods
+    void OnEnable() //Subscribes to our game events
     {
         GameEvents.OnVisionChange += OnVisionChange;
     }
-    //Unsubscribes to our game events
-    void OnDisable()
+    void OnDisable() //Unsubscribes to our game events
     {
         GameEvents.OnVisionChange -= OnVisionChange;
     }
@@ -100,9 +104,13 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         //Debug.Log("vision mode");
         if (vision == Vision.Normal)
+        {
             smellOVision.enabled = false;
+        }
         else
+        {
             smellOVision.enabled = true;
+        }
     }
-   
+    #endregion
 }
