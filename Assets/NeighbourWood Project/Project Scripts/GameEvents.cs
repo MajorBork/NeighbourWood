@@ -5,12 +5,13 @@ using UnityEngine;
 
 public static class GameEvents 
 {
+    #region Events Variables
     public static event Action<Vision> OnVisionChange = null;
     public static event Action<GameState> OnGameStateChange = null;
     public static event Action<Level> OnLevelChange = null;
-
-    //Events
-    #region Events
+    #endregion
+    //Events region
+    #region Vision Events
     public static void ReportVisionChange(Vision vision)
     {
         //Debug.Log (">>> EVENT: ReportOnVisionChange((" + vision +")");
