@@ -3,23 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using EasyEditor;
-
 public class DialogueManager : Singleton<DialogueManager>
 {
+    #region Variables
     public DialogueList[] dialogueList;
     public Text nameText;
     public Text dialogueText;
     private Queue<string> sentences;
     public GameState gameState;
+    #endregion
+    #region Start and Update Methods
     void Start() // Use this for initialization
     {
         sentences = new Queue<string>();
     }
-    public void StartDialogue(DialogueList dialogueSentences)
+    #endregion
+    #region Dialogue Methods
+    public void StartDialogue(DialogueList dialogueList)
     {
-        nameText.text = dialogueSentences.name;
+        nameText.text = dialogueList.name;
         sentences.Clear();
-        foreach (string sentence in dialogueSentences.sentences)
+        foreach (string sentence in dialogueList.sentences)
         {
             sentences.Enqueue(sentence);
         }
@@ -45,13 +49,16 @@ public class DialogueManager : Singleton<DialogueManager>
         }
         GameEvents.ReportGameStateChange(GameState.FreeRoam);
     }
+    #endregion
 }
 [Groups("Base Settings")]
 [System.Serializable]
 public class DialogueList
 {
+    #region Array Variables
     public int dialogueID;
     public string name;
     [TextArea(3, 10)]
     public string[] sentences;
+    #endregion
 }

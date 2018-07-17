@@ -183,10 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 0}
-  dialogueList:
-    dialogueID: 0
-    name: 
-    sentences: []
+  dialogueList: []
 --- !u!114 &326587750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,6 +617,7 @@ GameObject:
   - component: {fileID: 605067280}
   - component: {fileID: 605067283}
   - component: {fileID: 605067284}
+  - component: {fileID: 605067285}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -710,8 +708,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueList:
   - dialogueID: 0
-    name: 
-    sentences: []
+    name: Woofing
+    sentences:
+    - Woof
+    - Woof Woof
+    - Woof Woof Woof
   nameText: {fileID: 1571413666}
   dialogueText: {fileID: 1785720921}
   gameState: 0
@@ -727,7 +728,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CharacterList:
-  - characterID: 0
+  - characterID: 1
+    characterName: 
+    characterType: 0
+    tasks: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    icon: {fileID: 0}
+  - characterID: 2
+    characterName: 
+    characterType: 0
+    tasks: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    icon: {fileID: 0}
+  - characterID: 3
+    characterName: 
+    characterType: 0
+    tasks: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    icon: {fileID: 0}
+  - characterID: 4
+    characterName: 
+    characterType: 0
+    tasks: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    icon: {fileID: 0}
+  - characterID: 5
+    characterName: 
+    characterType: 0
+    tasks: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    icon: {fileID: 0}
+  - characterID: 6
+    characterName: 
+    characterType: 0
+    tasks: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    icon: {fileID: 0}
+  - characterID: 7
+    characterName: 
+    characterType: 0
+    tasks: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    icon: {fileID: 0}
+  - characterID: 8
+    characterName: 
+    characterType: 0
+    tasks: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    icon: {fileID: 0}
+  - characterID: 9
+    characterName: 
+    characterType: 0
+    tasks: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    icon: {fileID: 0}
+  - characterID: 10
     characterName: 
     characterType: 0
     tasks: 0
@@ -745,7 +809,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6a4b4fc9dd9a9c448b0dd18218958bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: 0
+  item:
+  - itemID: 0
+    item: 0
+    itemIcon: {fileID: 0}
+--- !u!114 &605067285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 605067276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7d14ad3ae9ed248b01cc6df14e4875, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &798381210
 GameObject:
   m_ObjectHideFlags: 0
