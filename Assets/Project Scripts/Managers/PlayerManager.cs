@@ -16,6 +16,8 @@ public class PlayerManager : Singleton<PlayerManager>
     GameObject player;
     GameObject playerCamera;
     public PostProcessingBehaviour smellOVision;
+    public GameObject[] smellObjects;
+    public int smellObjectNums;
     public int forwardSpeed = 10;
     public int backwardSpeed = 10;
     public int leftSpeed = 10;
@@ -27,8 +29,9 @@ public class PlayerManager : Singleton<PlayerManager>
         player = GameObject.FindWithTag("Player");
         playerCamera = GameObject.FindWithTag("MainCamera");
         smellOVision = GetComponentInChildren<PostProcessingBehaviour>();
-        //smellOVision.enabled = false;
+        smellOVision.enabled = false;
         vision = Vision.Normal;
+        smellObjects = new GameObject[4];
     }
     void Update() // Update is called once per frame
     {
@@ -107,11 +110,19 @@ public class PlayerManager : Singleton<PlayerManager>
         //Debug.Log("vision mode");
         if (vision == Vision.Normal)
         {
-            smellOVision.enabled = false;
+            //smellOVision.enabled = false;
+            foreach (GameObject smellObject in smellObjects)
+            {
+                smellObject.SetActive(false);
+            }
         }
         else
         {
-            smellOVision.enabled = true;
+            //smellOVision.enabled = true;
+            foreach (GameObject smellObject in smellObjects)
+            {
+                smellObject.SetActive(true);
+            }
         }
     }
     #endregion
