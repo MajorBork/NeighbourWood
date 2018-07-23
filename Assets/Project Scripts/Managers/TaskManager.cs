@@ -28,8 +28,10 @@ public class TaskManager : Singleton<TaskManager>
 [System.Serializable]
 public class Task
 {
+    #region Array Variables
     public int taskID;
     public Tasks tasks;
     public Day day;
     public TimeSlot timeSlot;
+    #endregion
 }

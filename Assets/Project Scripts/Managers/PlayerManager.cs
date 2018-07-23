@@ -13,10 +13,10 @@ public class PlayerManager : Singleton<PlayerManager>
 {
     #region Variables
     public Vision vision;
-    GameObject player;
-    GameObject playerCamera;
+    public GameObject player;
+    public GameObject playerCamera;
     public PostProcessingBehaviour smellOVision;
-    public GameObject[] smellObjects;
+    public GameObject[] smellObjects = new GameObject[0];
     public int smellObjectNums;
     public int forwardSpeed = 10;
     public int backwardSpeed = 10;
@@ -29,9 +29,9 @@ public class PlayerManager : Singleton<PlayerManager>
         player = GameObject.FindWithTag("Player");
         playerCamera = GameObject.FindWithTag("MainCamera");
         smellOVision = GetComponentInChildren<PostProcessingBehaviour>();
-        smellOVision.enabled = false;
+        smellOVision.profile.vignette.enabled = false;
         vision = Vision.Normal;
-        smellObjects = new GameObject[4];
+        
     }
     void Update() // Update is called once per frame
     {
@@ -40,6 +40,7 @@ public class PlayerManager : Singleton<PlayerManager>
             case GameState.FreeRoam:
                 MovementController();
                 VisionController();
+                CameraController();
                 break;
             case GameState.Dialogue:
                 DialogueController();
@@ -81,22 +82,27 @@ public class PlayerManager : Singleton<PlayerManager>
             if (vision == Vision.Normal)
             {
                 vision = Vision.Smell;
-                Camera.main.GetComponent<GenericImageEffect>().enabled = true;
+                
             }
             else
             {
                 vision = Vision.Normal;
-                Camera.main.GetComponent<GenericImageEffect>().enabled = false;
+                
             }
             GameEvents.ReportVisionChange(vision);
         }
+    }
+    void CameraController()
+    {
+
     }
     void DialogueController()
     {
         
     }
     #endregion
-    #region OnVisionChange Event Methods
+    #region Event Methods
+    #region Vision Event and Listeners
     void OnEnable() //Subscribes to our game events
     {
         GameEvents.OnVisionChange += OnVisionChange;
@@ -110,7 +116,8 @@ public class PlayerManager : Singleton<PlayerManager>
         //Debug.Log("vision mode");
         if (vision == Vision.Normal)
         {
-            //smellOVision.enabled = false;
+            Camera.main.GetComponent<GenericImageEffect>().enabled = false;
+            smellOVision.profile.vignette.enabled = false;
             foreach (GameObject smellObject in smellObjects)
             {
                 smellObject.SetActive(false);
@@ -118,12 +125,14 @@ public class PlayerManager : Singleton<PlayerManager>
         }
         else
         {
-            //smellOVision.enabled = true;
+            Camera.main.GetComponent<GenericImageEffect>().enabled = true;
+            smellOVision.profile.vignette.enabled = true;
             foreach (GameObject smellObject in smellObjects)
             {
                 smellObject.SetActive(true);
             }
         }
     }
+    #endregion
     #endregion
 }
