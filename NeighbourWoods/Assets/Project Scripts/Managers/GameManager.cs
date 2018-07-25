@@ -11,20 +11,21 @@ public enum GameState
     PauseScreen,
     CreditScreen,
 }
-
-public class GameManager : Singleton<GameManager>
+namespace Manager
 {
-    public int foodLevel;
-    public ItemType itemType;
-    public GameState gameState;
-    
-    void Start()
+    public class GameManager : Singleton<GameManager>
     {
-        
+        public int foodLevel;
+        public ItemType itemType;
+        public GameState gameState;
+
+        void Start()
+        {
+
+        }
+        void Update()
+        {
+
+        }
     }
-    void Update()
-    {
-        
-    }
-    
 }

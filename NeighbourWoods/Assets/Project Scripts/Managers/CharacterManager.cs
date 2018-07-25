@@ -10,20 +10,22 @@ public enum CharaterType
     Cat,
     Fox,
 }
-
-public class CharacterManager : MonoBehaviour
+namespace Manager.Character
 {
-    public Character[] CharacterList;
-}
-[Groups("Base Settings")]
-[System.Serializable]
-public class Character
-{
-    public int characterID;
-    public string characterName;
-    public CharaterType characterType;
-    public Tasks tasks;
-    public int basePlayerLoyalty;
-    public int baseHumanLoyalty;
-    public Text icon;
+    public class CharacterManager : MonoBehaviour
+    {
+        public Characters[] characters;
+    }
+    [Groups("Base Settings")]
+    [System.Serializable]
+    public class Characters
+    {
+        public int characterID;
+        public string characterName;
+        public CharaterType characterType;
+        public Tasks tasks;
+        public int basePlayerLoyalty;
+        public int baseHumanLoyalty;
+        public Text icon;
+    }
 }

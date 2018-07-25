@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEditor;
 using EasyEditor;
-using UnityEditor;
-using UnityEngine;
+using Manager.Dialogue;
 
 [Groups("Base Settings")]
 [CustomEditor(typeof(DialogueManager))]

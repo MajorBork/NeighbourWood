@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using UnityEditor;
 using EasyEditor;
-using UnityEngine;
+using Manager.Task;
 
 [Groups("Base Settings")]
 [CustomEditor(typeof(TaskManager))]

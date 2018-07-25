@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using EasyEditor;
 using UnityEngine.UI;
 using UnityEngine;
-public enum Item
+public enum ItemObject
 {
     Stick,
     Ball,
 }
-
-public class ItemManager : MonoBehaviour
+namespace Manager.Item
 {
-    public Items[] item;
+    public class ItemManager : MonoBehaviour
+    {
+        public Items[] item;
+    }
 
-}
-
-[Groups("Base Settings")]
-[System.Serializable]
-public class Items
-{
-    public int itemID;
-    public Item item;
-    public Text itemIcon;
+    [Groups("Base Settings")]
+    [System.Serializable]
+    public class Items
+    {
+        public int itemID;
+        public ItemObject item;
+        public Image itemIcon;
+    }
 }

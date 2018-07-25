@@ -11,7 +11,6 @@ public enum Day
     Day6,
     Day7,
 }
-
 public enum TimeSlot
 {
     Morning,
@@ -19,24 +18,30 @@ public enum TimeSlot
     Afternoon,
     Evening,
 }
-
-public class LevelManager : Singleton<LevelManager>
+namespace Manager.Level
 {
-    public Day day;
-    public TimeSlot timeSlot;
-    public int currentTime;
-    public int maxtask;
-	void Start () // Use this for initialization
+    public class LevelManager : Singleton<LevelManager>
     {
-		
-	}
-	void Update () // Update is called once per frame
-    {
-		
-	}
-    void UpdateTime() // updates our time to the next increment 
-    {
-        // if increment > max add 1 to day
-        // resets increment 
+        #region Variables
+        public Day day;
+        public TimeSlot timeSlot;
+        public int currentTime;
+        public int maxtask;
+        #endregion
+        #region Start and Update Methods
+        void Start() // Use this for initialization
+        {
+
+        }
+        void Update() // Update is called once per frame
+        {
+
+        }
+        #endregion
+        void UpdateTime() // updates our time to the next increment 
+        {
+            // if increment > max add 1 to day
+            // resets increment 
+        }
     }
 }

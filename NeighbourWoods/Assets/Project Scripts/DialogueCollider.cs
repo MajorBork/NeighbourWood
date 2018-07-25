@@ -1,22 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class DialogueCollider : MonoBehaviour
 {
-    public GameObject dialogueManager;
-    public GameObject dialogueBox;
+    #region Variables
     public Collider dialoguecol;
     public GameState gameState;
-    void Start () // Use this for initialization
-    {
-		
-	}
-	void Update () // Update is called once per frame
-    {
-
-	}
+    #endregion
+    #region TriggerMethods
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -42,4 +34,5 @@ public class DialogueCollider : MonoBehaviour
             Debug.Log("working");
         }
     }
+    #endregion
 }
