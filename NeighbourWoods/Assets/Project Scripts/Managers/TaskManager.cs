@@ -34,6 +34,8 @@ namespace Manager.Task
     {
         #region Array Variables
         public int taskID;
+        public bool taskStarted;
+        public bool taskCompleted;
         public Tasks tasks;
         public Day day;
         public TimeSlot timeSlot;

@@ -10,6 +10,7 @@ public static class GameEvents
     public static event Action<GameState> OnGameStateChange = null;
     public static event Action<Day> OnDayChange = null;
     public static event Action<TimeSlot> OnTimeSlotChange = null;
+    //public static event Action<Tasks> OnTaskStartedChange = null;
     #endregion
     #region Events
     public static void ReportVisionChange(Vision vision)
@@ -35,7 +36,7 @@ public static class GameEvents
             OnDayChange(day);
         }
     }
-    public static void ReportDayChange(TimeSlot timeSlot)
+    public static void ReportOnTimeSlotChange(TimeSlot timeSlot)
     {
         if (OnTimeSlotChange != null)
         {

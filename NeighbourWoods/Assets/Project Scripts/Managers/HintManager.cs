@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using EasyEditor;
 using UnityEngine;
+using EasyEditor;
 using Manager.Character;
 
 namespace Manager.Hint
 {
+    #region HintManager Class
     public class HintManager : MonoBehaviour
     {
         public Hints[] hints;
@@ -18,13 +19,16 @@ namespace Manager.Hint
 
         }
     }
+    #endregion
+    #region Hints Class
     [Groups("Base Settings")]
     [System.Serializable]
     public class Hints
     {
-        Characters[] characters;
-        int Hintnum;
+        public Characters characters;
+        public int Hintnum;
         [TextArea(3, 10)]
-        int Text;
+        public string Text;
     }
+    #endregion
 }

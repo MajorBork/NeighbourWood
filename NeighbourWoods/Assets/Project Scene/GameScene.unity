@@ -883,7 +883,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &605067277
 MonoBehaviour:
@@ -937,6 +937,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tasks:
   - taskID: 0
+    taskStarted: 0
+    taskCompleted: 0
     tasks: 0
     day: 0
     timeSlot: 0
@@ -968,14 +970,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueList:
   - dialoguePorCHolder: 0
+    characters: []
     dialogueID: 0
     dialogueHolderName: 
     sentences:
     - Woof
-  characterText: {fileID: 0}
-  characterDialogueText: {fileID: 0}
-  playerNameText: {fileID: 0}
-  playerDialogueText: {fileID: 0}
+  - dialoguePorCHolder: 0
+    characters: []
+    dialogueID: 0
+    dialogueHolderName: 
+    sentences:
+    - Woof
+  characterText: {fileID: 1929140515}
+  characterDialogueText: {fileID: 923068217}
+  playerNameText: {fileID: 61441809}
+  playerDialogueText: {fileID: 1582918980}
   gameState: 0
 --- !u!114 &605067283
 MonoBehaviour:
@@ -989,82 +998,302 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - characterID: 0
-    characterName: 
+  - characterID: 1
+    characterName: Shobe
+    characterGender: 0
     characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 9
+    baseHumanLoyalty: 10
     tasks: 0
-    basePlayerLoyalty: 0
+    icon: {fileID: 0}
+  - characterID: 2
+    characterName: Forest Unicorn
+    characterGender: 2
+    characterType: 8
+    characterBreed: 1
+    basePlayerLoyalty: 4
+    baseHumanLoyalty: 3
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 3
+    characterName: Forest Spirit
+    characterGender: 2
+    characterType: 11
+    characterBreed: 19
+    basePlayerLoyalty: 5
     baseHumanLoyalty: 0
+    tasks: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
+    characterGender: 0
     characterType: 0
-    tasks: 0
+    characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
+    tasks: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
+    characterGender: 0
     characterType: 0
-    tasks: 0
+    characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
+    tasks: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
+    characterGender: 0
     characterType: 0
-    tasks: 0
+    characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
+    tasks: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
+    characterGender: 0
     characterType: 0
-    tasks: 0
+    characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
+    tasks: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
+    characterGender: 0
     characterType: 0
-    tasks: 0
+    characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
+    tasks: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
+    characterGender: 0
     characterType: 0
-    tasks: 0
+    characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
+    tasks: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
+    characterGender: 0
     characterType: 0
-    tasks: 0
+    characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
+    tasks: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
+    characterGender: 0
     characterType: 0
-    tasks: 0
+    characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
+    tasks: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
+    characterGender: 0
     characterType: 0
-    tasks: 0
+    characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
+    tasks: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
+    characterGender: 0
     characterType: 0
-    tasks: 0
+    characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
+    icon: {fileID: 0}
+  - characterID: 0
+    characterName: 
+    characterGender: 0
+    characterType: 0
+    characterBreed: 0
+    basePlayerLoyalty: 0
+    baseHumanLoyalty: 0
+    tasks: 0
     icon: {fileID: 0}
 --- !u!114 &605067284
 MonoBehaviour:
@@ -1079,8 +1308,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
   - itemID: 0
+    itemName: 
     item: 0
     itemIcon: {fileID: 0}
+    itemObject: {fileID: 0}
+  - itemID: 0
+    itemName: 
+    item: 0
+    itemIcon: {fileID: 0}
+    itemObject: {fileID: 0}
 --- !u!114 &605067285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,7 +1328,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe7d14ad3ae9ed248b01cc6df14e4875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hints: []
+  hints:
+  - characters:
+      characterID: 0
+      characterName: 
+      characterGender: 0
+      characterType: 0
+      characterBreed: 0
+      basePlayerLoyalty: 0
+      baseHumanLoyalty: 0
+      tasks: 0
+      icon: {fileID: 0}
+    Hintnum: 0
+    Text: 
 --- !u!114 &605067286
 MonoBehaviour:
   m_ObjectHideFlags: 0

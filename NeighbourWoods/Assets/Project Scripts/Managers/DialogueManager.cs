@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Manager.Character;
+using TMPro;
 using EasyEditor;
-
 public enum DialoguePorCHolder
 {
     Player,
@@ -17,10 +17,10 @@ namespace Manager.Dialogue
     {
         #region Variables
         public DialogueList[] dialogueList;
-        public Text characterText;
-        public Text characterDialogueText;
-        public Text playerNameText;
-        public Text playerDialogueText;
+        public TMP_Text characterText;
+        public TMP_Text characterDialogueText;
+        public TMP_Text playerNameText;
+        public TMP_Text playerDialogueText;
         private Queue<string> sentences;
         public GameState gameState;
         #endregion
@@ -71,7 +71,7 @@ namespace Manager.Dialogue
     {
         #region Array Variables
         public DialoguePorCHolder dialoguePorCHolder;
-        Characters[] characters;
+        public Characters[] characters;
         public int dialogueID;
         public string dialogueHolderName;
         [TextArea(3, 10)]

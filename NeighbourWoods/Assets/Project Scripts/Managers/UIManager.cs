@@ -2,13 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
-public enum ItemType
-{
-    Stick,
-    Bone,
-    Frisbee,
-    // all the items in the game
-}
+
 namespace Manager.UI 
 {
     #region UIManager Class

@@ -9,6 +9,7 @@ public enum Vision
 }
 namespace Manager.Player
 {
+
     public class PlayerManager : Singleton<PlayerManager>
     {
         #region Variables

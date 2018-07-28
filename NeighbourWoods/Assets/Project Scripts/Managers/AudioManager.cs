@@ -2,20 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using Manager.Player;
 
 namespace Manager.Audio
 {
+    #region AudioManager Class
     public class AudioManager : Singleton<AudioManager>
     {
         public float volume;
         public static bool mute;
-        //Subscribes to our game events
-        void OnEnable()
+        void OnEnable()  //Subscribes to our game events
         {
             GameEvents.OnVisionChange += OnVisionChange;
         }
-        //Unsubscribes to our game events
-        void OnDisable()
+        void OnDisable() //Unsubscribes to our game events
         {
             GameEvents.OnVisionChange -= OnVisionChange;
         }
@@ -24,4 +24,5 @@ namespace Manager.Audio
             Debug.Log("DOG SOUND");
         }
     }
+    #endregion
 }

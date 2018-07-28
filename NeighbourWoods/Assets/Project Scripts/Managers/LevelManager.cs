@@ -20,6 +20,7 @@ public enum TimeSlot
 }
 namespace Manager.Level
 {
+    
     public class LevelManager : Singleton<LevelManager>
     {
         #region Variables
