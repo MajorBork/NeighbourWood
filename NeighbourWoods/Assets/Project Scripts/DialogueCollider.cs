@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manager;
 
 public class DialogueCollider : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class DialogueCollider : MonoBehaviour
     public Collider dialoguecol;
     public GameState gameState;
     #endregion
-    #region TriggerMethods
+    #region ColliderTriggerMethods
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

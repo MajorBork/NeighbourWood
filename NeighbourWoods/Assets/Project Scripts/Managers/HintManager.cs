@@ -7,7 +7,7 @@ using Manager.Character;
 namespace Manager.Hint
 {
     #region HintManager Class
-    public class HintManager : MonoBehaviour
+    public class HintManager : Singleton<HintManager>
     {
         public Hints[] hints;
         void Start() // Use this for initialization

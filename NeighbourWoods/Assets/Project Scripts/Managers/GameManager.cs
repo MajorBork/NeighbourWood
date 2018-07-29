@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
-public enum GameState
-{
-    FreeRoam,
-    Dialogue,
-    TitleScreen,
-    PauseScreen,
-    CreditScreen,
-}
+using Manager.Item;
 namespace Manager
 {
+    #region GameState Enum
+    public enum GameState
+    {
+        FreeRoam,
+        Dialogue,
+        TitleScreen,
+        PauseScreen,
+        CreditScreen,
+    }
+    #endregion
+    #region GameManager 
     public class GameManager : Singleton<GameManager>
     {
         public int foodLevel;
@@ -28,4 +31,5 @@ namespace Manager
 
         }
     }
+    #endregion
 }

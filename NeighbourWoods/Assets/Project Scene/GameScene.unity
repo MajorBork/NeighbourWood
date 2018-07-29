@@ -939,7 +939,7 @@ MonoBehaviour:
   - taskID: 0
     taskStarted: 0
     taskCompleted: 0
-    tasks: 0
+    tasksType: 0
     day: 0
     timeSlot: 0
 --- !u!114 &605067281
@@ -953,6 +953,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a62e7971e6c9a4f4e802a8af2d054348, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levels:
+  - locationNumber: 0
+    locationsName: 
+    areaCollider: {fileID: 0}
+    tasksInArea:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
   day: 0
   timeSlot: 0
   currentTime: 0
@@ -1005,7 +1016,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 9
     baseHumanLoyalty: 10
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 2
     characterName: Forest Unicorn
@@ -1014,7 +1031,13 @@ MonoBehaviour:
     characterBreed: 1
     basePlayerLoyalty: 4
     baseHumanLoyalty: 3
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 3
     characterName: Forest Spirit
@@ -1023,7 +1046,13 @@ MonoBehaviour:
     characterBreed: 19
     basePlayerLoyalty: 5
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1032,7 +1061,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1041,7 +1076,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1050,7 +1091,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1059,7 +1106,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1068,7 +1121,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1077,7 +1136,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1086,7 +1151,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1095,7 +1166,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1104,7 +1181,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1113,7 +1196,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1122,7 +1211,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1131,7 +1226,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1140,7 +1241,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1149,7 +1256,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1158,7 +1271,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1167,7 +1286,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1176,7 +1301,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1185,7 +1316,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1194,7 +1331,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1203,7 +1346,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1212,7 +1361,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1221,7 +1376,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1230,7 +1391,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1239,7 +1406,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1248,7 +1421,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1257,7 +1436,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1266,7 +1451,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1275,7 +1466,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1284,7 +1481,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
   - characterID: 0
     characterName: 
@@ -1293,7 +1496,13 @@ MonoBehaviour:
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks: 0
+    tasks:
+      taskID: 0
+      taskStarted: 0
+      taskCompleted: 0
+      tasksType: 0
+      day: 0
+      timeSlot: 0
     icon: {fileID: 0}
 --- !u!114 &605067284
 MonoBehaviour:
@@ -1337,7 +1546,13 @@ MonoBehaviour:
       characterBreed: 0
       basePlayerLoyalty: 0
       baseHumanLoyalty: 0
-      tasks: 0
+      tasks:
+        taskID: 0
+        taskStarted: 0
+        taskCompleted: 0
+        tasksType: 0
+        day: 0
+        timeSlot: 0
       icon: {fileID: 0}
     Hintnum: 0
     Text: 

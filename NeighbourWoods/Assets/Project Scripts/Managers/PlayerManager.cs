@@ -2,14 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
-public enum Vision
-{
-    Normal,
-    Smell,
-}
+
 namespace Manager.Player
 {
-
+    #region Vision Enum
+    public enum Vision
+    {
+        Normal,
+        Smell,
+    }
+    #endregion
+    #region PlayerManager Class
     public class PlayerManager : Singleton<PlayerManager>
     {
         #region Variables
@@ -137,4 +140,5 @@ namespace Manager.Player
         #endregion
         #endregion
     }
+    #endregion
 }

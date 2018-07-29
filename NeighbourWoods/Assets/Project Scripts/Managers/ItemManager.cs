@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using EasyEditor;
 using UnityEngine.UI;
 using UnityEngine;
-public enum ItemType
-{
-    #region ItemType Enums
-    Accessory,
-    ClueObject,
-    FetchObject,
-    FoodObject,
-    QuestObject,
-    #endregion
-}
+
 namespace Manager.Item
 {
+    #region ItemType Enums
+    public enum ItemType
+    {
+        Accessory,
+        ClueObject,
+        FetchObject,
+        FoodObject,
+        QuestObject,
+    }
+    #endregion
     #region ItemManager Class
-    public class ItemManager : MonoBehaviour
+    public class ItemManager : Singleton<ItemManager>
     {
         public Items[] item;
     }

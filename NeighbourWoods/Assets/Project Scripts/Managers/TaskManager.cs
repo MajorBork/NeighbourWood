@@ -2,25 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using EasyEditor;
-public enum Tasks
-{
-    Dialogue,
-    Fetch,
-    Puzzle,
-    // other
-}
+using Manager.Level;
+
 namespace Manager.Task
 {
+    public enum Taskstype
+    {
+        Dialogue,
+        Fetch,
+        Puzzle,
+        // other
+    }
     #region TasManager Class
     public class TaskManager : Singleton<TaskManager>
     {
+        public Tasks[] tasks;
         #region Task Methods
-        public Task[] tasks;
-        public void TaskStarted() // name and value in the Parameters
+        public void TaskStarted(Tasks tasks) // name and value in the Parameters
         {
             //Sends started task to eventmanager 
         }
-        public void TaskCompleted() // name and value in the Parameters
+        public void TaskCompleted(Tasks tasks) // name and value in the Parameters
         {
             //Sends completed task to eventmanager
         }
@@ -30,13 +32,13 @@ namespace Manager.Task
     #region Task Class
     [Groups("Base Settings")]
     [System.Serializable]
-    public class Task
+    public class Tasks
     {
         #region Array Variables
         public int taskID;
         public bool taskStarted;
         public bool taskCompleted;
-        public Tasks tasks;
+        public Taskstype tasksType;
         public Day day;
         public TimeSlot timeSlot;
         #endregion

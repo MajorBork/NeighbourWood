@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Manager.Player;
+using Manager.Level;
+using Manager;
 
 public static class GameEvents 
 {

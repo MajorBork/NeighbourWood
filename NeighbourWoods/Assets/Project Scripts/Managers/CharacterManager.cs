@@ -2,63 +2,67 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using Manager.Task;
 using EasyEditor;
-public enum CharacterGender
-{
-    #region CharacterGender Enums
-    Male,
-    Female,
-    Unknown,
-    Mixed,
-    #endregion
-}
-public enum CharaterType
-{
-    #region CharacterType Enums
-    Dog,
-    Cat,
-    Fox,
-    Rabbit,
-    Crow,
-    Duck,
-    Squirrel,
-    Chickens,
-    Deer,
-    ForestSpirit,
-    RedFox,
-    Unknown,
-    #endregion
-}
-public enum CharacterBreed
-{
-    #region CharacterBreed Enums 
-    ShibaInu,
-    Unicorn,
-    Mutt,
-    Corgi,
-    Pug,
-    Staffy,
-    GreatDane,
-    BlackDwarfLop,
-    Dward,
-    BlackBritishShorthair,
-    Chihuahua,
-    Bengal,
-    Komondor,
-    BorderCollies,
-    AmericanShorthairBreed,
-    GingerShorthair,
-    BlackDomesticShorthair,
-    Labrador,
-    ShetlandSheepdog,
-    Unknown,
-    #endregion
-}
 namespace Manager.Character
 {
-    
+    #region CharacterGender Enum
+    public enum CharacterGender
+    {
+        
+        Male,
+        Female,
+        Unknown,
+        Mixed,
+        
+    }
+    #endregion
+    #region CharacterType Enum
+    public enum CharaterType
+    {
+        
+        Dog,
+        Cat,
+        Fox,
+        Rabbit,
+        Crow,
+        Duck,
+        Squirrel,
+        Chickens,
+        Deer,
+        ForestSpirit,
+        RedFox,
+        Unknown,
+        
+    }
+    #endregion
+    #region CharacterBreed Enum
+    public enum CharacterBreed
+    {
+        ShibaInu,
+        Unicorn,
+        Mutt,
+        Corgi,
+        Pug,
+        Staffy,
+        GreatDane,
+        BlackDwarfLop,
+        Dward,
+        BlackBritishShorthair,
+        Chihuahua,
+        Bengal,
+        Komondor,
+        BorderCollies,
+        AmericanShorthairBreed,
+        GingerShorthair,
+        BlackDomesticShorthair,
+        Labrador,
+        ShetlandSheepdog,
+        Unknown,
+    }
+    #endregion
     #region CharacterManager Class
-    public class CharacterManager : MonoBehaviour
+    public class CharacterManager : Singleton<CharacterManager>
     {
         public Characters[] characters;
     }

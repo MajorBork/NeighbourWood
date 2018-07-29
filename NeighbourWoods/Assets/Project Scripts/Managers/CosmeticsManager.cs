@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Manager.Cosmetics
 {
     #region
-    public class CosmeticsManager : MonoBehaviour
+    public class CosmeticsManager : Singleton<CosmeticsManager>
     {
         public Cosmetics[] cosmeticList;
         // Use this for initialization
