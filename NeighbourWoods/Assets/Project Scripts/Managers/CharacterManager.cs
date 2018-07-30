@@ -9,18 +9,15 @@ namespace Manager.Character
     #region CharacterGender Enum
     public enum CharacterGender
     {
-        
         Male,
         Female,
         Unknown,
         Mixed,
-        
     }
     #endregion
     #region CharacterType Enum
     public enum CharaterType
     {
-        
         Dog,
         Cat,
         Fox,
@@ -33,7 +30,6 @@ namespace Manager.Character
         ForestSpirit,
         RedFox,
         Unknown,
-        
     }
     #endregion
     #region CharacterBreed Enum
@@ -72,14 +68,14 @@ namespace Manager.Character
     [System.Serializable]
     public class Characters
     {
-        public int characterID;
         public string characterName;
         public CharacterGender characterGender;
         public CharaterType characterType;
         public CharacterBreed characterBreed;
         public int basePlayerLoyalty;
         public int baseHumanLoyalty;
-        public Tasks tasks;
+        public string task;
+        public string dialogueID;
         public Image icon;
     }
     #endregion

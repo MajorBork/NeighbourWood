@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine;
 namespace Manager.Cosmetics
 {
-    #region
+    #region CosmeticsManager Class
     public class CosmeticsManager : Singleton<CosmeticsManager>
     {
         public Cosmetics[] cosmeticList;
@@ -21,7 +21,7 @@ namespace Manager.Cosmetics
         }
     }
     #endregion
-    #region
+    #region Comsmetics Class
     [Groups("Base Settings")]
     [System.Serializable]
     public class Cosmetics

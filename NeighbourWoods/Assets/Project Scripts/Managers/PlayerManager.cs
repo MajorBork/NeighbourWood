@@ -21,11 +21,20 @@ namespace Manager.Player
         public GameObject playerCamera;
         public PostProcessingBehaviour smellOVision;
         public GameObject[] smellObjects = new GameObject[0];
-        public int smellObjectNums;
+        #region Controls Variables
+        public float mouseSensitivity = 10;
         public int forwardSpeed = 10;
         public int backwardSpeed = 10;
         public int leftSpeed = 10;
         public int rightSpeed = 10;
+        Vector3 currentRotation;
+        Vector3 rotationSmoothVelocity;
+        public Vector2 pitchMinMax = new Vector2(-40,85);
+        public float cameraRotation;
+        public Transform target;
+        float yaw = 0;
+        float pitch = 0;
+        #endregion
         #endregion
         #region Start and Update Methods
         void Start() // Use this for initialization
@@ -35,7 +44,6 @@ namespace Manager.Player
             smellOVision = GetComponentInChildren<PostProcessingBehaviour>();
             smellOVision.profile.vignette.enabled = false;
             vision = Vision.Normal;
-
         }
         void Update() // Update is called once per frame
         {
@@ -60,7 +68,7 @@ namespace Manager.Player
         }
         #endregion
         #region Control Methods
-        void MovementController()
+        void MovementController() // The Function that moves the Player 
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -79,26 +87,30 @@ namespace Manager.Player
                 transform.position += Vector3.back * Time.deltaTime * backwardSpeed;
             }
         }
-        void VisionController()
+        void VisionController() // The Function that switches the 
         {
-            if (Input.GetKeyDown(KeyCode.N))
+            if (Input.GetKeyDown(KeyCode.V))
             {
                 if (vision == Vision.Normal)
                 {
                     vision = Vision.Smell;
-
                 }
                 else
                 {
                     vision = Vision.Normal;
-
                 }
                 GameEvents.ReportVisionChange(vision);
             }
         }
         void CameraController()
         {
-
+            yaw += Input.GetAxis("Mouse X") * mouseSensitivity;
+            pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+            pitch = Mathf.Clamp(pitch, pitchMinMax.x, pitchMinMax.y);
+            Vector3 targetRotation = new Vector3(pitch, yaw);
+            float rotationSmoothTime = 0.12f;
+            currentRotation = Vector3.SmoothDamp(currentRotation, new Vector3(pitch, yaw), ref rotationSmoothVelocity, rotationSmoothTime);
+            playerCamera.transform.eulerAngles = targetRotation;
         }
         void DialogueController()
         {

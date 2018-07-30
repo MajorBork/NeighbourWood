@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using EasyEditor;
 using UnityEngine.UI;
 using UnityEngine;
-
 namespace Manager.Item
 {
     #region ItemType Enums

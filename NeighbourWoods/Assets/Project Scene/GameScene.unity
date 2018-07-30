@@ -362,6 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 605067282}
+  characterName: 
   dialogueList: []
 --- !u!114 &326587750
 MonoBehaviour:
@@ -910,7 +911,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &605067279
 MonoBehaviour:
@@ -936,7 +937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tasks:
-  - taskID: 0
+  - taskID: 
     taskStarted: 0
     taskCompleted: 0
     tasksType: 0
@@ -958,7 +959,7 @@ MonoBehaviour:
     locationsName: 
     areaCollider: {fileID: 0}
     tasksInArea:
-      taskID: 0
+      taskID: 
       taskStarted: 0
       taskCompleted: 0
       tasksType: 0
@@ -980,18 +981,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueList:
-  - dialoguePorCHolder: 0
-    characters: []
-    dialogueID: 0
-    dialogueHolderName: 
+  - dialogueID: SHI_01
     sentences:
     - Woof
-  - dialoguePorCHolder: 0
-    characters: []
-    dialogueID: 0
-    dialogueHolderName: 
+    - kguiflyifgyh
+  - dialogueID: UNI_01
     sentences:
-    - Woof
+    - neigh
   characterText: {fileID: 1929140515}
   characterDialogueText: {fileID: 923068217}
   playerNameText: {fileID: 61441809}
@@ -1009,500 +1005,302 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - characterID: 1
-    characterName: Shobe
+  - characterName: Shobe
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 9
     baseHumanLoyalty: 10
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: SHI_01
     icon: {fileID: 0}
-  - characterID: 2
-    characterName: Forest Unicorn
+  - characterName: Forest Unicorn
     characterGender: 2
     characterType: 8
     characterBreed: 1
     basePlayerLoyalty: 4
     baseHumanLoyalty: 3
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: UNI_01
     icon: {fileID: 0}
-  - characterID: 3
-    characterName: Forest Spirit
+  - characterName: Forest Spirit
     characterGender: 2
     characterType: 11
     characterBreed: 19
     basePlayerLoyalty: 5
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
-  - characterID: 0
-    characterName: 
+  - characterName: 
     characterGender: 0
     characterType: 0
     characterBreed: 0
     basePlayerLoyalty: 0
     baseHumanLoyalty: 0
-    tasks:
-      taskID: 0
-      taskStarted: 0
-      taskCompleted: 0
-      tasksType: 0
-      day: 0
-      timeSlot: 0
+    task: 
+    dialogueID: 
     icon: {fileID: 0}
 --- !u!114 &605067284
 MonoBehaviour:
@@ -1539,20 +1337,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hints:
   - characters:
-      characterID: 0
       characterName: 
       characterGender: 0
       characterType: 0
       characterBreed: 0
       basePlayerLoyalty: 0
       baseHumanLoyalty: 0
-      tasks:
-        taskID: 0
-        taskStarted: 0
-        taskCompleted: 0
-        tasksType: 0
-        day: 0
-        timeSlot: 0
+      task: 
+      dialogueID: 
       icon: {fileID: 0}
     Hintnum: 0
     Text: 
@@ -2006,7 +1798,7 @@ GameObject:
   - component: {fileID: 1047729199}
   - component: {fileID: 1047729198}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: TestCharacter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2021,10 +1813,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
+  m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1047729199
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2076,10 +1868,16 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.36, y: 1.47, z: 5.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1093873632}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1093873632 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950,
+    type: 2}
+  m_PrefabInternal: {fileID: 1912435479}
 --- !u!1 &1147256504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,6 +2366,67 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1439829475}
+--- !u!1001 &1572329533
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -11.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.0618689
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114775166537300044, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 605067282}
+    - target: {fileID: 114775166537300044, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: dialogueBox
+      value: 
+      objectReference: {fileID: 1147256504}
+    - target: {fileID: 114775166537300044, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: dialogueID
+      value: UNI_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663659696612298, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
+      propertyPath: m_Name
+      value: DialogueCollider (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1582918978
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,6 +2829,21 @@ Prefab:
       propertyPath: smellObjects.Array.data[3]
       value: 
       objectReference: {fileID: 1430289399}
+    - target: {fileID: 54862312626898778, guid: caa9747212a8dd84098e9315617c48c6,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114537276219861232, guid: caa9747212a8dd84098e9315617c48c6,
+        type: 2}
+      propertyPath: pitchMinMax.x
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114537276219861232, guid: caa9747212a8dd84098e9315617c48c6,
+        type: 2}
+      propertyPath: pitchMinMax.y
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: caa9747212a8dd84098e9315617c48c6, type: 2}
   m_IsPrefabParent: 0
@@ -3020,31 +2894,31 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1047729201}
     m_Modifications:
     - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.51
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.0618689
+      value: -0.40813112
       objectReference: {fileID: 0}
     - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4.29
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
       propertyPath: m_LocalRotation.w
@@ -3052,18 +2926,53 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114775166537300044, guid: aade8d4ced2da6c4da7e353ab3988950,
         type: 2}
       propertyPath: dialogueManager
       value: 
-      objectReference: {fileID: 605067276}
+      objectReference: {fileID: 605067282}
     - target: {fileID: 114775166537300044, guid: aade8d4ced2da6c4da7e353ab3988950,
         type: 2}
       propertyPath: dialogueBox
       value: 
       objectReference: {fileID: 1147256504}
+    - target: {fileID: 114775166537300044, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: dialogueID
+      value: SHI_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 65904939679012036, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65904939679012036, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65904939679012036, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65904939679012036, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 65904939679012036, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 65904939679012036, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}
   m_IsPrefabParent: 0

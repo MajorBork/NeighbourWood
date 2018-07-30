@@ -5,18 +5,21 @@ using UnityEngine.UI;
 using Manager.Character;
 using TMPro;
 using EasyEditor;
-public enum DialoguePorCHolder
-{
-    Player,
-    Character,
-}
+
 namespace Manager.Dialogue
 {
+    #region DialoguePorCHolder Enum
+    public enum DialoguePorCHolder
+    {
+        Player,
+        Character,
+    }
+    #endregion
     #region DialogueManager Class
     public class DialogueManager : Singleton<DialogueManager>
     {
         #region Variables
-        public DialogueList[] dialogueList;
+        public List<DialogueList> dialogueList;
         public TMP_Text characterText;
         public TMP_Text characterDialogueText;
         public TMP_Text playerNameText;
@@ -33,7 +36,7 @@ namespace Manager.Dialogue
         #region Dialogue Methods
         public void StartDialogue(DialogueList dialogueList)
         {
-            playerNameText.text = dialogueList.dialogueHolderName;
+            //playerNameText.text = dialogueList.dialogueHolderName;
             sentences.Clear();
             foreach (string sentence in dialogueList.sentences)
             {
@@ -70,10 +73,9 @@ namespace Manager.Dialogue
     public class DialogueList
     {
         #region Array Variables
-        public DialoguePorCHolder dialoguePorCHolder;
-        public Characters[] characters;
-        public int dialogueID;
-        public string dialogueHolderName;
+        //public DialoguePorCHolder dialoguePorCHolder;
+        //public Characters characters;
+        public string dialogueID;
         [TextArea(3, 10)]
         public string[] sentences;
         #endregion

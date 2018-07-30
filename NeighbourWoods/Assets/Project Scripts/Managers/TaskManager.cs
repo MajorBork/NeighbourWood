@@ -6,6 +6,7 @@ using Manager.Level;
 
 namespace Manager.Task
 {
+    #region Tasktype Enum
     public enum Taskstype
     {
         Dialogue,
@@ -13,6 +14,7 @@ namespace Manager.Task
         Puzzle,
         // other
     }
+    #endregion
     #region TasManager Class
     public class TaskManager : Singleton<TaskManager>
     {
@@ -35,7 +37,7 @@ namespace Manager.Task
     public class Tasks
     {
         #region Array Variables
-        public int taskID;
+        public string taskID;
         public bool taskStarted;
         public bool taskCompleted;
         public Taskstype tasksType;

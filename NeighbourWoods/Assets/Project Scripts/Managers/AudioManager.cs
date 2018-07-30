@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.Audio;
 using Manager.Player;
 using EasyEditor;
-
 namespace Manager.Audio
 {
+    #region AudioType Enum
     public enum AudioType
     {
         Character,
@@ -17,6 +17,7 @@ namespace Manager.Audio
         Game,
         Music,
     }
+    #endregion
     #region AudioManager Class
     public class AudioManager : Singleton<AudioManager>
     {
@@ -37,6 +38,7 @@ namespace Manager.Audio
         }
     }
     #endregion
+    #region AudioFiles Class
     [Groups("Base Settings")]
     [System.Serializable]
     public class AudioFiles
@@ -45,4 +47,5 @@ namespace Manager.Audio
         public AudioClip audioClip;
         public AudioType audioType;
     }
+    #endregion
 }
