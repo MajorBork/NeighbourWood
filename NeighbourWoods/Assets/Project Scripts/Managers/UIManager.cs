@@ -10,6 +10,7 @@ namespace Manager.UI
     {
         #region Variables
         public CanvasGroup dialogueCanvas;
+        public 
         #endregion
         #region Start and Update
         void Start() // Use this for initialization
@@ -49,6 +50,7 @@ namespace Manager.UI
             if (gameState == GameState.Dialogue)
             {
                 dialogueCanvas.alpha = 1;
+
             }
             else
             {
