@@ -6,6 +6,12 @@ using Manager.Task;
 using EasyEditor;
 namespace Manager.Character
 {
+    #region CharacterName Enum
+    public enum CharacterName
+    {
+
+    }
+    #endregion
     #region CharacterGender Enum
     public enum CharacterGender
     {
@@ -68,7 +74,7 @@ namespace Manager.Character
     [System.Serializable]
     public class Characters
     {
-        public string characterName;
+        public CharacterName characterName;
         public CharacterGender characterGender;
         public CharaterType characterType;
         public CharacterBreed characterBreed;

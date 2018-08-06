@@ -43,7 +43,6 @@ namespace Manager.Audio
     [System.Serializable]
     public class AudioFiles
     {
-        public int audioFileID;
         public AudioClip audioClip;
         public AudioType audioType;
     }

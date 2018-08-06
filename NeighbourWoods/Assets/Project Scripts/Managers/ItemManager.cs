@@ -15,6 +15,12 @@ namespace Manager.Item
         QuestObject,
     }
     #endregion
+    #region ItemName Enum
+    public enum ItemName
+    {
+
+    }
+    #endregion
     #region ItemManager Class
     public class ItemManager : Singleton<ItemManager>
     {
@@ -26,9 +32,8 @@ namespace Manager.Item
     [System.Serializable]
     public class Items
     {
-        public int itemID;
-        public string itemName;
-        public ItemType item;
+        public ItemName itemName;
+        public ItemType itemType;
         public Image itemIcon;
         public GameObject itemObject;
     }

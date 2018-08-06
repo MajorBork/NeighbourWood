@@ -9,7 +9,8 @@ public class DialogueCollider : MonoBehaviour
 {
     #region Variables
     public Collider dialoguecol;
-    public string dialogueID;
+    public DialogueName dialogueName;
+    public DialogueName otherDialogueName;
     public string taskID;
     public DialogueManager dialogueManager;
     public TaskManager taskManager;
@@ -21,7 +22,7 @@ public class DialogueCollider : MonoBehaviour
     {
         foreach (DialogueList dl in dialogueManager.dialogueList)
         {
-            if (dl.dialogueID == dialogueID)
+            if (dl.dialogueName == dialogueName)
             {
                 dialogueManager.StartDialogue(dl);
                 Debug.Log(dl.sentences);
@@ -37,7 +38,6 @@ public class DialogueCollider : MonoBehaviour
     {
         //dialogueManager.StartDialogue(characterName);
         SetDialogueID();
-
     }
     #endregion
     #region ColliderTriggerMethods

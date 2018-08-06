@@ -6,6 +6,12 @@ using Manager.Level;
 
 namespace Manager.Task
 {
+    #region TaskName Enum
+    public enum TaskName
+    {
+
+    }
+    #endregion
     #region Tasktype Enum
     public enum Taskstype
     {
@@ -37,7 +43,7 @@ namespace Manager.Task
     public class Tasks
     {
         #region Array Variables
-        public string taskID;
+        public TaskName taskName;
         public bool taskStarted;
         public bool taskCompleted;
         public Taskstype tasksType;

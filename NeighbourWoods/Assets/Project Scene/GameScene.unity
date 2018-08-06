@@ -937,7 +937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tasks:
-  - taskID: 
+  - taskName: 0
     taskStarted: 0
     taskCompleted: 0
     tasksType: 0
@@ -955,11 +955,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - locationNumber: 0
-    locationsName: 
+  - locationsName: 
     areaCollider: {fileID: 0}
     tasksInArea:
-      taskID: 
+      taskName: 0
       taskStarted: 0
       taskCompleted: 0
       tasksType: 0
@@ -982,10 +981,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueList:
   - dialogueID: SHI_01
+    dialogueName: 1
     sentences:
     - Woof
     - kguiflyifgyh
   - dialogueID: UNI_01
+    dialogueName: 2
     sentences:
     - neigh
   characterText: {fileID: 1929140515}
@@ -1005,7 +1006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - characterName: Shobe
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1014,7 +1015,7 @@ MonoBehaviour:
     task: 
     dialogueID: SHI_01
     icon: {fileID: 0}
-  - characterName: Forest Unicorn
+  - characterName: 0
     characterGender: 2
     characterType: 8
     characterBreed: 1
@@ -1023,7 +1024,7 @@ MonoBehaviour:
     task: 
     dialogueID: UNI_01
     icon: {fileID: 0}
-  - characterName: Forest Spirit
+  - characterName: 0
     characterGender: 2
     characterType: 11
     characterBreed: 19
@@ -1032,7 +1033,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1041,7 +1042,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1050,7 +1051,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1059,7 +1060,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1068,7 +1069,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1077,7 +1078,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1086,7 +1087,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1095,7 +1096,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1104,7 +1105,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1113,7 +1114,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1122,7 +1123,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1131,7 +1132,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1140,7 +1141,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1149,7 +1150,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1158,7 +1159,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1167,7 +1168,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1176,7 +1177,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1185,7 +1186,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1194,7 +1195,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1203,7 +1204,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1212,7 +1213,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1221,7 +1222,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1230,7 +1231,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1239,7 +1240,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1248,7 +1249,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1257,7 +1258,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1266,7 +1267,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1275,7 +1276,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1284,7 +1285,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1293,7 +1294,7 @@ MonoBehaviour:
     task: 
     dialogueID: 
     icon: {fileID: 0}
-  - characterName: 
+  - characterName: 0
     characterGender: 0
     characterType: 0
     characterBreed: 0
@@ -1314,14 +1315,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item:
-  - itemID: 0
-    itemName: 
-    item: 0
+  - itemName: 0
+    itemType: 0
     itemIcon: {fileID: 0}
     itemObject: {fileID: 0}
-  - itemID: 0
-    itemName: 
-    item: 0
+  - itemName: 0
+    itemType: 0
     itemIcon: {fileID: 0}
     itemObject: {fileID: 0}
 --- !u!114 &605067285
@@ -1337,7 +1336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hints:
   - characters:
-      characterName: 
+      characterName: 0
       characterGender: 0
       characterType: 0
       characterBreed: 0
@@ -2962,6 +2961,11 @@ Prefab:
         type: 2}
       propertyPath: m_Size.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114775166537300044, guid: aade8d4ced2da6c4da7e353ab3988950,
+        type: 2}
+      propertyPath: dialogueName
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aade8d4ced2da6c4da7e353ab3988950, type: 2}

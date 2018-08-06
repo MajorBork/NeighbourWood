@@ -9,7 +9,6 @@ namespace Manager.Level
     #region Days Enum
     public enum Day
     {
-      
         Day1,
         Day2,
         Day3,
@@ -17,18 +16,15 @@ namespace Manager.Level
         Day5,
         Day6,
         Day7,
-       
     }
     #endregion
     #region TimeSlot Enum
     public enum TimeSlot
     {
-        
         Morning,
         Midday,
         Afternoon,
         Evening,
-        
     }
     #endregion
     #region LevelManager Class
@@ -64,7 +60,6 @@ namespace Manager.Level
     public class Levels
     {
         #region Array Variables
-        public int locationNumber;
         public string locationsName;
         public BoxCollider areaCollider;
         public Tasks tasksInArea;

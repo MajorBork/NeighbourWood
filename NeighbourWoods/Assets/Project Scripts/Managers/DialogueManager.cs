@@ -8,6 +8,14 @@ using EasyEditor;
 
 namespace Manager.Dialogue
 {
+    #region DialogueName Enum
+    public enum DialogueName
+    {
+        PLA_01,
+        SHI_01,
+        UNI_01,
+    }
+    #endregion
     #region DialoguePorCHolder Enum
     public enum DialoguePorCHolder
     {
@@ -53,7 +61,15 @@ namespace Manager.Dialogue
             }
             string sentence = sentences.Dequeue();
             playerDialogueText.text = sentence;
+            characterDialogueText.text = sentence;
             //Debug.Log(sentence);
+        }
+        public void DialoguePersonSwitch()
+        {
+            //if ()
+            //{
+            //
+            //}
         }
         public void EndDialogue()
         {
@@ -76,6 +92,7 @@ namespace Manager.Dialogue
         //public DialoguePorCHolder dialoguePorCHolder;
         //public Characters characters;
         public string dialogueID;
+        public DialogueName dialogueName;
         [TextArea(3, 10)]
         public string[] sentences;
         #endregion
