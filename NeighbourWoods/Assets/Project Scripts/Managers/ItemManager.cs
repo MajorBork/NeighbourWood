@@ -15,8 +15,8 @@ namespace Manager.Item
         QuestObject,
     }
     #endregion
-    #region ItemName Enum
-    public enum ItemName
+    #region ItemID Enum
+    public enum ItemID
     {
 
     }
@@ -32,7 +32,7 @@ namespace Manager.Item
     [System.Serializable]
     public class Items
     {
-        public ItemName itemName;
+        public ItemID itemName;
         public ItemType itemType;
         public Image itemIcon;
         public GameObject itemObject;

@@ -25,7 +25,7 @@ namespace Manager.Task
     public class TaskManager : Singleton<TaskManager>
     {
         public Tasks[] tasks;
-        #region Task Methods
+        #region TaskStarted() TaskCompleted()
         public void TaskStarted(Tasks tasks) // name and value in the Parameters
         {
             //Sends started task to eventmanager 

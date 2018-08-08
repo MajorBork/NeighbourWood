@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4348929719211830}
   - component: {fileID: 33523832221801128}
   - component: {fileID: 23929353771895866}
-  - component: {fileID: 136297048106769380}
   - component: {fileID: 114537276219861232}
   - component: {fileID: 54862312626898778}
   - component: {fileID: 143569766000810316}
@@ -195,6 +194,7 @@ MonoBehaviour:
   playerCamera: {fileID: 0}
   playerCameraTransform: {fileID: 0}
   smellOVision: {fileID: 114748111642764316}
+  characterController: {fileID: 0}
   smellObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -202,8 +202,11 @@ MonoBehaviour:
   - {fileID: 0}
   mouseSensitivity: 10
   walkSpeed: 5
-  runSpeed: 7
-  turnSmoothTime: 1
+  runSpeed: 10
+  gravity: -12
+  jumpHeight: 1
+  airControlPercent: 0
+  turnSmoothTime: 0.5
   speedSmoothTime: 0.1
   lockCursor: 0
   pitchMinMax: {x: -5, y: 30}
@@ -240,19 +243,6 @@ Behaviour:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1961133176519448}
   m_Enabled: 1
---- !u!136 &136297048106769380
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1095634006722310}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!143 &143569766000810316
 CharacterController:
   m_ObjectHideFlags: 1

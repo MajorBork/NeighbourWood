@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
-
 namespace Manager.Player
 {
     #region Vision Enum
@@ -22,29 +21,35 @@ namespace Manager.Player
         public GameObject playerCamera;
         public Transform playerCameraTransform;
         public PostProcessingBehaviour smellOVision;
+        public CharacterController characterController;
         public GameObject[] smellObjects = new GameObject[0];
         #endregion
         #region Controls Variables
-        public float mouseSensitivity = 10;
-        public float walkSpeed = 2;
-        public float runSpeed = 6;
-        public float turnSmoothTime = 0.2f;
-        public float speedSmoothTime = 0.1f;
-        float turnSmoothVelocity;
-        float speedSmoothVelocity;
-        float currentSpeed;
         //public int forwardSpeed = 10;
         //public int backwardSpeed = 10;
         //public int leftSpeed = 10;
         //public int rightSpeed = 10;
+        public float mouseSensitivity = 10;
+        public float walkSpeed = 2;
+        public float runSpeed = 6;
+        public float gravity = -12;
+        public float jumpHeight = 1;
+        [Range(0, 1)]
+        public float airControlPercent;
+        private float velocityY;
+        public float turnSmoothTime = 0.2f;
+        public float speedSmoothTime = 0.1f;
+        private float turnSmoothVelocity;
+        private float speedSmoothVelocity;
+        private float currentSpeed;
         public bool lockCursor;
         Vector3 currentRotation;
         Vector3 rotationSmoothVelocity;
         public Vector2 pitchMinMax = new Vector2(-40,85);
         public float cameraRotation;
         public Transform target;
-        float yaw = 0;
-        float pitch = 0;
+        private float yaw = 0;
+        private float pitch = 0;
         #endregion
         #endregion
         #region Start() and Update()
@@ -56,6 +61,7 @@ namespace Manager.Player
             smellOVision = GetComponentInChildren<PostProcessingBehaviour>();
             smellOVision.profile.vignette.enabled = false;
             vision = Vision.Normal;
+            characterController = GetComponent<CharacterController>();
             if (lockCursor)
             {
                 Cursor.lockState = CursorLockMode.Locked;
@@ -64,16 +70,20 @@ namespace Manager.Player
         }
         void Update() // Update is called once per frame
         {
+            Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+            Vector2 inputDir = input.normalized;
+            bool running = Input.GetButton("Sprint"); // Sprinting in Game
             switch (GameManager.instance.gameState)
             {
-                case GameState.FreeRoam:
-                    MovementController();
+                case GameState.FreeRoam: // if the GameState enum is in FreeRoam then all of the movement and button controls updates
+                    MovementController(inputDir,running);
                     VisionController();
                     CameraController();
                     BarkController();
                     DigController();
+                    JumpController();
                     break;
-                case GameState.Dialogue:
+                case GameState.Dialogue: // if the GameState enum is in Dialogue then the DialogueController() updates 
                     DialogueController();
                     break;
                 case GameState.CreditScreen:
@@ -88,22 +98,29 @@ namespace Manager.Player
         #endregion
         #region Control Methods
         #region MovementController()
-        void MovementController() // The Function that moves the Player 
+        void MovementController(Vector2 inputDir, bool running) // The Function that moves the Player 
         {
-            Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-            Vector2 inputDir = input.normalized;
             if (inputDir != Vector2.zero)
             {
                 float targetRotation = Mathf.Atan2(inputDir.x, inputDir.y) * Mathf.Rad2Deg + playerCameraTransform.eulerAngles.y;
-                transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, turnSmoothTime);
+                transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref turnSmoothVelocity, GetModifiedSmoothTime(turnSmoothTime));
             }
-            bool running = Input.GetKey(KeyCode.LeftShift); // Sprinting in Game
             float targetSpeed = ((running) ? runSpeed : walkSpeed) * inputDir.magnitude;
-            currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, speedSmoothTime);
-            transform.Translate (transform.forward * currentSpeed * Time.deltaTime, Space.World);
+            currentSpeed = Mathf.SmoothDamp(currentSpeed, targetSpeed, ref speedSmoothVelocity, GetModifiedSmoothTime(speedSmoothTime));
+            velocityY += Time.deltaTime * gravity;
+            Vector3 velocity = transform.forward * currentSpeed + Vector3.up * velocityY;
+            characterController.Move(velocity * Time.deltaTime);
+            if (characterController.isGrounded)
+            {
+                velocityY = 0;
+            }
+            #region Animator?
             // Animator?
-            //float animationSpeedPercent = ((running) ? 1:0.5f) * inputDir.magnitude;
+            //float animationSpeedPercent = ((running) ? currentSpeed/runSpeed : currentSpeed/walkSpeed* .5f);
             //animator.SetFloat("speedPercent", animationSpeedPercent, speedSmoothTime, Time.deltaTime);
+            //currentSpeed = new Vector2(characterController.velocity.x, characterContoller.velocity.z).magnitude;
+            #endregion
+            #region Old MovementCode
             // Old movement code
             //if (Input.GetKey(KeyCode.W))
             //{
@@ -121,12 +138,25 @@ namespace Manager.Player
             //{
             //    transform.position += Vector3.back * Time.deltaTime * backwardSpeed;
             //}
+            #endregion
+        }
+        float GetModifiedSmoothTime(float smoothTime)
+        {
+            if (characterController.isGrounded)
+            {
+                return smoothTime;
+            }
+            if (airControlPercent == 0)
+            {
+                return float.MaxValue;
+            }
+            return smoothTime / airControlPercent;
         }
         #endregion
         #region VisionController()
         void VisionController() // The Function that switches the Vision enum event to smell or normal so that the colour blind camera comes on and the smell objects are turn on or off
         {
-            if (Input.GetKeyDown(KeyCode.V))
+            if (Input.GetButtonDown("Smell-O-Vision"))
             {
                 if (vision == Vision.Normal)
                 {
@@ -152,22 +182,42 @@ namespace Manager.Player
             playerCamera.transform.eulerAngles = targetRotation;
         }
         #endregion
+        #region JumpController()
         void JumpController()
         {
-
+            if (Input.GetButtonDown("Jump"))
+            {
+                if (characterController.isGrounded)
+                {
+                    float jumpVelocity = Mathf.Sqrt(-2 * gravity * jumpHeight);
+                    velocityY = jumpVelocity;
+                }
+            }
         }
+        #endregion
+        #region DigController()
         void DigController()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetButtonDown("Dig"))
             {
                 Debug.Log("Test Digging");
             }
         }
+        #endregion
+        #region BarkController()
         void BarkController()
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetButtonDown("Bark"))
             {
                 Debug.Log("Bark");
+            }
+        }
+        #endregion
+        void MapController()
+        {
+            if (Input.GetButtonDown("Map"))
+            {
+                Debug.Log("Map");
             }
         }
         void DialogueController()

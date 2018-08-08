@@ -6,10 +6,48 @@ using Manager.Task;
 using EasyEditor;
 namespace Manager.Character
 {
-    #region CharacterName Enum
-    public enum CharacterName
+    #region CharacterID Enum
+    public enum CharacterID
     {
-
+        Shobe,
+        ForestUnicorn,
+        ForestSpirit,
+        Leia,
+        Oscar,
+        ConeDog,
+        Deer,
+        Muffles,
+        Keg,
+        TheStrays,
+        Bundy,
+        Milly,
+        Midnight,
+        Ginger,
+        Mishka,
+        BullyDog,
+        Chickens,
+        Familliar,
+        Komondor,
+        TheColony,
+        MurphyCallie,
+        FrangelinaFrankenface,
+        Gingie,
+        Snowball,
+        Archie,
+        TheMurder,
+        Ebony,
+        Roger,
+        MotherDuck,
+        MotherCat,
+        TheTrio,
+        Squirrel,
+        TheFox,
+        Owner,
+        Witch,
+        Children,
+        Mole,
+        YoungTurtles,
+        Kelpie, 
     }
     #endregion
     #region CharacterGender Enum
@@ -54,6 +92,7 @@ namespace Manager.Character
         Chihuahua,
         Bengal,
         Komondor,
+        Chickens,
         BorderCollies,
         AmericanShorthairBreed,
         GingerShorthair,
@@ -74,7 +113,7 @@ namespace Manager.Character
     [System.Serializable]
     public class Characters
     {
-        public CharacterName characterName;
+        public CharacterID characterName;
         public CharacterGender characterGender;
         public CharaterType characterType;
         public CharacterBreed characterBreed;

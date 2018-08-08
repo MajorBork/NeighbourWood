@@ -27,6 +27,10 @@ namespace Manager.Level
         Evening,
     }
     #endregion
+    public enum LocationID
+    {
+        
+    }
     #region LevelManager Class
     public class LevelManager : Singleton<LevelManager>
     {
@@ -60,7 +64,7 @@ namespace Manager.Level
     public class Levels
     {
         #region Array Variables
-        public string locationsName;
+        public string locationsID;
         public BoxCollider areaCollider;
         public Tasks tasksInArea;
         #endregion

@@ -9,13 +9,14 @@ namespace Manager.UI
     public class UIManager : Singleton<UIManager>
     {
         #region Variables
-        public CanvasGroup dialogueCanvas;
-        public 
+        public CanvasGroup dialogueBoxCanvas;
+        public CanvasGroup buttonPressBox;
         #endregion
         #region Start and Update
         void Start() // Use this for initialization
         {
-            dialogueCanvas.alpha = 0;
+            dialogueBoxCanvas.alpha = 0;
+            buttonPressBox.alpha = 0;
         }
         void Update() // Update is called once per frame
         {
@@ -49,12 +50,11 @@ namespace Manager.UI
         {
             if (gameState == GameState.Dialogue)
             {
-                dialogueCanvas.alpha = 1;
-
+                dialogueBoxCanvas.alpha = 1;
             }
             else
             {
-                dialogueCanvas.alpha = 0;
+                dialogueBoxCanvas.alpha = 0;
             }
         }
         #endregion
