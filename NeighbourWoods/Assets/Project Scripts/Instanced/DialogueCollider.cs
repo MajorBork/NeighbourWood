@@ -13,7 +13,7 @@ public class DialogueCollider : MonoBehaviour
     public DialogueID dialogueID;
     public GameState gameState;
     //public CanvasGroup otherDialogueName;
-    //public CanvasGroup buttonPressBox;
+    public CanvasGroup buttonPressBox;
     public DialogueManager dialogueManager;
     public TaskManager taskManager;
     public bool canStartDialogue = false;
@@ -26,18 +26,9 @@ public class DialogueCollider : MonoBehaviour
             if (dl.dialogueID == dialogueID)
             {
                 dialogueManager.StartDialogue(dl);
-            }
-            //Debug.Log(dl.characters);
+                Debug.Log(dl);
+            }  
         }
-    }
-    public void SetTaskID()
-    {
-        
-    }
-    public void TriggerDialogue()
-    {
-        //dialogueManager.StartDialogue(characterName);
-        SetDialogueID();
     }
     #endregion
     #region ColliderTriggerMethods
@@ -46,11 +37,15 @@ public class DialogueCollider : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canStartDialogue = true;
-            Debug.Log("working");
+            Debug.Log("Entering in character collider working");
         }
     }
     void OnTriggerStay(Collider Other)
     {
+        if (Other.tag == "Player")
+        {
+            buttonPressBox.alpha = 1;
+        }
         if (canStartDialogue && Input.GetKeyDown(KeyCode.E))
         {
             if (gameState == GameState.FreeRoam)
@@ -58,11 +53,13 @@ public class DialogueCollider : MonoBehaviour
                 gameState = GameState.Dialogue;
                 GameEvents.ReportGameStateChange(gameState);
                 SetDialogueID();
+                
             }
             else
             {
                 gameState = GameState.FreeRoam;
                 GameEvents.ReportGameStateChange(gameState);
+                buttonPressBox.alpha = 2;
             }
         }
     }
@@ -72,7 +69,7 @@ public class DialogueCollider : MonoBehaviour
         {
             canStartDialogue = false;
             GameEvents.ReportGameStateChange(GameState.FreeRoam);
-            Debug.Log("working");
+            Debug.Log("Exiting from character collider working");
         }
     }
     #endregion
