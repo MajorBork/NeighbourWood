@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
+using UnityEngine.UI;
+using TMPro;
 namespace Manager.Player
 {
     #region Vision Enum
@@ -16,6 +18,7 @@ namespace Manager.Player
     {
         #region Variables
         public Vision vision;
+        public TMP_Text testTMP;
         #region Object Variables
         public GameObject player;
         public GameObject playerCamera;
@@ -201,6 +204,7 @@ namespace Manager.Player
             if (Input.GetButtonDown("Dig"))
             {
                 Debug.Log("Test Digging");
+                //testTMP.text = ("Test Digging to be coded");
             }
         }
         #endregion
@@ -210,6 +214,7 @@ namespace Manager.Player
             if (Input.GetButtonDown("Bark"))
             {
                 Debug.Log("Bark");
+                //testTMP.text = ("Bark to be coded");
             }
         }
         #endregion
@@ -218,6 +223,7 @@ namespace Manager.Player
             if (Input.GetButtonDown("Map"))
             {
                 Debug.Log("Map");
+                //testTMP.text = ("Map to be coded");
             }
         }
         void DialogueController()

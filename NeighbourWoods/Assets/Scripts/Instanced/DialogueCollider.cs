@@ -70,6 +70,7 @@ public class DialogueCollider : MonoBehaviour
             canStartDialogue = false;
             GameEvents.ReportGameStateChange(GameState.FreeRoam);
             Debug.Log("Exiting from character collider working");
+            buttonPressBox.alpha = 0;
         }
     }
     #endregion
