@@ -9,7 +9,19 @@ namespace Manager.Task
     #region TaskName Enum
     public enum TaskName
     {
-
+        FIND_PUUPIES,
+        GIVE_TURTLES_PIZZA,
+        CHASE_OFF_FOX,
+        SECURE_CHICKEN_COOP,
+        DEAL_WITH_FOX,
+        MEDIATE_BETWEEN_FOX_AND_CHICKENS,
+        HELP_SQUIRREL,
+        CONVENIENCE_STORE_HEIST,
+        DEAL_WITH_DEER,
+        MEET_UNICORN,
+        FAWN_RESCUE,
+        WITCH_HOUSE_VISIT,
+        FIND_SOCKS_FOR_ARCHIE
     }
     #endregion
     #region Tasktype Enum
