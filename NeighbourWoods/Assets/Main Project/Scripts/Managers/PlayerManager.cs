@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.PostProcessing;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 namespace Manager.Player
 {
     #region Vision Enum
@@ -57,6 +58,12 @@ namespace Manager.Player
         public Transform target;
         private float yaw = 0;
         private float pitch = 0;
+        [SerializeField]
+        public float maxVignIntensity = 0.3f;
+        [SerializeField]
+        public float vignDuration = 0.5f;
+        private float vignIntensity = 0;
+        private Tween vignTween;
         #endregion
         #endregion
         #region Start() and Update()
@@ -66,7 +73,6 @@ namespace Manager.Player
             playerCamera = GameObject.FindWithTag("MainCamera");
             playerCameraTransform = Camera.main.transform;
             smellOVision = GetComponentInChildren<PostProcessingBehaviour>();
-            smellOVision.profile.vignette.enabled = false;
             vision = Vision.NORMAL;
             characterController = GetComponent<CharacterController>();
             if (lockCursor)
@@ -160,7 +166,7 @@ namespace Manager.Player
             return smoothTime / airControlPercent;
         }
         #endregion
-        #region VisionController()
+        #region VisionController() and Associated Methods()
         void VisionController() // The Function that switches the Vision enum event to smell or normal so that the colour blind camera comes on and the smell objects are turn on or off
         {
             if (Input.GetButtonDown("Smell-O-Vision"))
@@ -175,6 +181,21 @@ namespace Manager.Player
                 }
                 GameEvents.ReportVisionChange(vision);
             }
+        }
+        public void AnimateVignette(bool value)
+        {
+            vignTween = DOTween.To(() => vignIntensity, x => vignIntensity = x, value ? maxVignIntensity : 0, vignDuration).OnUpdate(UpdateVignetteAnimation);
+            vignTween.OnComplete(OnVignetteAnimationEnd);
+        }
+        void UpdateVignetteAnimation()
+        {
+            VignetteModel.Settings vign = smellOVision.profile.vignette.settings;
+            vign.intensity = vignIntensity;
+            smellOVision.profile.vignette.settings = vign;
+        }
+        void OnVignetteAnimationEnd()
+        {
+            vignTween = null;
         }
         #endregion
         #region CameraController()
@@ -245,13 +266,15 @@ namespace Manager.Player
         {
             GameEvents.OnVisionChange -= OnVisionChange;
         }
+        float visionLevel;
         void OnVisionChange(Vision vision)
         {
             //Debug.Log("vision mode");
             if (vision == Vision.NORMAL)
             {
                 Camera.main.GetComponent<GenericImageEffect>().enabled = false;
-                smellOVision.profile.vignette.enabled = false;
+                //DOTween.To(() => smellOVision.profile.vignette.settings.color, x => smellOVision.profile.vignette.settings.color = x, 5, 1);
+                AnimateVignette(false);
                 foreach (GameObject smellObject in smellObjects)
                 {
                     smellObject.SetActive(false);
@@ -260,7 +283,7 @@ namespace Manager.Player
             else
             {
                 Camera.main.GetComponent<GenericImageEffect>().enabled = true;
-                smellOVision.profile.vignette.enabled = true;
+                AnimateVignette(true);
                 foreach (GameObject smellObject in smellObjects)
                 {
                     smellObject.SetActive(true);
