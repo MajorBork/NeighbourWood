@@ -3536,6 +3536,11 @@ Prefab:
       propertyPath: testTMP
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114537276219861232, guid: caa9747212a8dd84098e9315617c48c6,
+        type: 2}
+      propertyPath: maxVignIntensity
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: caa9747212a8dd84098e9315617c48c6, type: 2}
   m_IsPrefabParent: 0

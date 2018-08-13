@@ -11,7 +11,7 @@ namespace Manager.Character
     {
         SHOBE,
         FOREST_UNICORN,
-        FOREST_SPIRIT,
+        FOREST_SPIRIT_RICK, 
         LEIA,
         OSCAR,
         CONE_DOG,
