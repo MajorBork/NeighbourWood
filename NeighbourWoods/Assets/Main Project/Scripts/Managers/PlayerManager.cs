@@ -7,19 +7,20 @@ using TMPro;
 namespace Manager.Player
 {
     #region Vision Enum
-    public enum Vision
+    public enum Vision //The Enum that controls which vision state you are in  
     {
         Normal,
         Smell,
     }
     #endregion
     #region PlayerManager Class
-    public class PlayerManager : Singleton<PlayerManager>
+    public class PlayerManager : Singleton<PlayerManager> // An script that will not be destroyed when going new levels (if we need to load new levels)
     {
         #region Variables
         public Vision vision;
         public TMP_Text testTMP;
         #region Object Variables
+        // All of the Variables that link to objects or components
         public GameObject player;
         public GameObject playerCamera;
         public Transform playerCameraTransform;
@@ -28,10 +29,13 @@ namespace Manager.Player
         public GameObject[] smellObjects = new GameObject[0];
         #endregion
         #region Controls Variables
+        //Old movement variables
         //public int forwardSpeed = 10;
         //public int backwardSpeed = 10;
         //public int leftSpeed = 10;
         //public int rightSpeed = 10;
+        //Space//
+        //All of the controls variables used in the control functions
         public float mouseSensitivity = 10;
         public float walkSpeed = 2;
         public float runSpeed = 6;
@@ -143,7 +147,7 @@ namespace Manager.Player
             //}
             #endregion
         }
-        float GetModifiedSmoothTime(float smoothTime)
+        float GetModifiedSmoothTime(float smoothTime) // The Function that allows me to control the amount of movement that the player has when in the air
         {
             if (characterController.isGrounded)
             {
