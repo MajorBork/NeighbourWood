@@ -9,13 +9,13 @@ namespace Manager.Audio
     #region AudioType Enum
     public enum AudioType
     {
-        Character,
-        CharacterDialogue,
-        PlayerDialogue,
-        Player,
-        SoundEffect,
-        Game,
-        Music,
+        CHARACTER,
+        CHARACTER_DIALOGUE,
+        PLAYER_DIALOGUE,
+        PLAYER,
+        SOUND_EFFECT,
+        GAME,
+        MUSIC,
     }
     #endregion
     #region AudioManager Class

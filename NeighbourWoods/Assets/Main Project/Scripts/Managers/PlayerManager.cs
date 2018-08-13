@@ -9,8 +9,8 @@ namespace Manager.Player
     #region Vision Enum
     public enum Vision //The Enum that controls which vision state you are in  
     {
-        Normal,
-        Smell,
+        NORMAL,
+        SMELL,
     }
     #endregion
     #region PlayerManager Class
@@ -67,7 +67,7 @@ namespace Manager.Player
             playerCameraTransform = Camera.main.transform;
             smellOVision = GetComponentInChildren<PostProcessingBehaviour>();
             smellOVision.profile.vignette.enabled = false;
-            vision = Vision.Normal;
+            vision = Vision.NORMAL;
             characterController = GetComponent<CharacterController>();
             if (lockCursor)
             {
@@ -82,7 +82,7 @@ namespace Manager.Player
             bool running = Input.GetButton("Sprint"); // Sprinting in Game
             switch (GameManager.instance.gameState)
             {
-                case GameState.FreeRoam: // if the GameState enum is in FreeRoam then all of the movement and button controls updates
+                case GameState.FREE_ROAM: // if the GameState enum is in FreeRoam then all of the movement and button controls updates
                     MovementController(inputDir,running);
                     VisionController();
                     CameraController();
@@ -90,14 +90,14 @@ namespace Manager.Player
                     DigController();
                     JumpController();
                     break;
-                case GameState.Dialogue: // if the GameState enum is in Dialogue then the DialogueController() updates 
+                case GameState.DIALOGUE: // if the GameState enum is in Dialogue then the DialogueController() updates 
                     DialogueController();
                     break;
-                case GameState.CreditScreen:
+                case GameState.TITLE_SCREEN:
                     break;
-                case GameState.PauseScreen:
+                case GameState.PAUSE_SCREEN:
                     break;
-                case GameState.TitleScreen:
+                case GameState.CREDIT_SCREEN:
                     break;
                 default: break;
             }
@@ -163,15 +163,15 @@ namespace Manager.Player
         #region VisionController()
         void VisionController() // The Function that switches the Vision enum event to smell or normal so that the colour blind camera comes on and the smell objects are turn on or off
         {
-            if (Input.GetButtonDown("Smell-O-Vision"))
+            if (Input.GetButtonDown("SMELL-O-Vision"))
             {
-                if (vision == Vision.Normal)
+                if (vision == Vision.NORMAL)
                 {
-                    vision = Vision.Smell;
+                    vision = Vision.SMELL;
                 }
                 else
                 {
-                    vision = Vision.Normal;
+                    vision = Vision.NORMAL;
                 }
                 GameEvents.ReportVisionChange(vision);
             }
@@ -248,7 +248,7 @@ namespace Manager.Player
         void OnVisionChange(Vision vision)
         {
             //Debug.Log("vision mode");
-            if (vision == Vision.Normal)
+            if (vision == Vision.NORMAL)
             {
                 Camera.main.GetComponent<GenericImageEffect>().enabled = false;
                 smellOVision.profile.vignette.enabled = false;

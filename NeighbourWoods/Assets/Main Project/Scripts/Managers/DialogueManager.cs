@@ -104,11 +104,11 @@ namespace Manager.Dialogue
         public void EndDialogue()
         {
             Debug.Log("End of converstion.");
-            if (gameState == GameState.Dialogue)
+            if (gameState == GameState.DIALOGUE)
             {
-                gameState = GameState.FreeRoam;
+                gameState = GameState.FREE_ROAM;
             }
-            GameEvents.ReportGameStateChange(GameState.FreeRoam);
+            GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
         }
         #endregion
     }

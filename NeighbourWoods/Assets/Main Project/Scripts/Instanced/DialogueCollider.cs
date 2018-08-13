@@ -48,16 +48,16 @@ public class DialogueCollider : MonoBehaviour
         }
         if (canStartDialogue && Input.GetKeyDown(KeyCode.E))
         {
-            if (gameState == GameState.FreeRoam)
+            if (gameState == GameState.FREE_ROAM)
             {
-                gameState = GameState.Dialogue;
+                gameState = GameState.DIALOGUE;
                 GameEvents.ReportGameStateChange(gameState);
                 SetDialogueID();
                 
             }
             else
             {
-                gameState = GameState.FreeRoam;
+                gameState = GameState.FREE_ROAM;
                 GameEvents.ReportGameStateChange(gameState);
                 buttonPressBox.alpha = 2;
             }
@@ -68,7 +68,7 @@ public class DialogueCollider : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             canStartDialogue = false;
-            GameEvents.ReportGameStateChange(GameState.FreeRoam);
+            GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
             Debug.Log("Exiting from character collider working");
             buttonPressBox.alpha = 0;
         }

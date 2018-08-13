@@ -10,11 +10,11 @@ namespace Manager
     #region GameState Enum
     public enum GameState
     {
-        FreeRoam,
-        Dialogue,
-        TitleScreen,
-        PauseScreen,
-        CreditScreen,
+        FREE_ROAM,
+        DIALOGUE,
+        TITLE_SCREEN,
+        PAUSE_SCREEN,
+        CREDIT_SCREEN,
     }
     #endregion
     #region GameManager 

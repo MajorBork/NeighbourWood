@@ -48,7 +48,7 @@ namespace Manager.UI
         }
         void OnGameStateChange(GameState gameState)
         {
-            if (gameState == GameState.Dialogue)
+            if (gameState == GameState.DIALOGUE)
             {
                 dialogueBoxCanvas.alpha = 1;
             }
