@@ -163,7 +163,7 @@ namespace Manager.Player
         #region VisionController()
         void VisionController() // The Function that switches the Vision enum event to smell or normal so that the colour blind camera comes on and the smell objects are turn on or off
         {
-            if (Input.GetButtonDown("SMELL-O-Vision"))
+            if (Input.GetButtonDown("Smell-O-Vision"))
             {
                 if (vision == Vision.NORMAL)
                 {

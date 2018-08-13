@@ -1157,7 +1157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levels:
-  - locationsID: 
+  - locationID: 0
     areaCollider: {fileID: 0}
     tasksInArea:
       taskName: 0
@@ -1189,6 +1189,11 @@ MonoBehaviour:
       to fit as much dialogue that it can handle without going off the screen. /P02/
     - Woof Woof good day. /P02/
     - Woof Woof. /P01/
+    - Woof Woof. /OP1/
+    - Woof bark /OP2/
+    - Bark Moo /OP3/
+    - 
+    - 
     - /END/
   - dialogueID: 4
     sentences:
