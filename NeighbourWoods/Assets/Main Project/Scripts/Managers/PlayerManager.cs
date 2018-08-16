@@ -5,6 +5,7 @@ using UnityEngine.PostProcessing;
 using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
+using PixelCrushers.DialogueSystem;
 namespace Manager.Player
 {
     #region Vision Enum
@@ -20,6 +21,8 @@ namespace Manager.Player
         #region Variables
         public Vision vision;
         public TMP_Text testTMP;
+        public DatabaseManager databaseManager;
+        public DialogueActor dialogueActor;
         #region Object Variables
         // All of the Variables that link to objects or components
         public GameObject player;

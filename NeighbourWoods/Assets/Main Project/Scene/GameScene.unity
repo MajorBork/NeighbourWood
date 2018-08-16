@@ -306,7 +306,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4320860413714658, guid: 5fa50fd3a15c2414ab6999d2e2e939b5, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1435947549432118, guid: 5fa50fd3a15c2414ab6999d2e2e939b5, type: 2}
       propertyPath: m_IsActive
@@ -439,7 +439,7 @@ Transform:
   - {fileID: 289671234}
   - {fileID: 1856170797}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &326587747
 GameObject:
@@ -1113,7 +1113,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &605067279
 MonoBehaviour:
@@ -2325,6 +2325,10 @@ GameObject:
   - component: {fileID: 1047729200}
   - component: {fileID: 1047729199}
   - component: {fileID: 1047729198}
+  - component: {fileID: 1047729205}
+  - component: {fileID: 1047729204}
+  - component: {fileID: 1047729203}
+  - component: {fileID: 1047729202}
   m_Layer: 0
   m_Name: TestCharacter
   m_TagString: Untagged
@@ -2399,8 +2403,233 @@ Transform:
   m_Children:
   - {fileID: 1093873632}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1047729202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1047729197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af33a602e20a3d4ca46c8a6ef942618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_key: TestCharacter
+  m_appendSaverTypeToKey: 0
+  m_saveAcrossSceneChanges: 0
+  m_usePlayerSpawnpoint: 0
+--- !u!114 &1047729203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1047729197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5473918a168c44fa0294bd4d1399f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationEvents:
+    onConversationStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
+        DialogueSystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    onConversationEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
+        DialogueSystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    onConversationCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
+        DialogueSystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    onConversationLine:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
+        DialogueSystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    onConversationLineEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
+        DialogueSystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    onConversationLineCancelled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
+        DialogueSystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    onConversationResponseMenu:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+ResponsesEvent,
+        DialogueSystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    onConversationResponseMenuTimeout:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    onLinkedConversationStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
+        DialogueSystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  barkEvents:
+    onBarkStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
+        DialogueSystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    onBarkEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
+        DialogueSystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    onBarkLine:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+SubtitleEvent,
+        DialogueSystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  sequenceEvents:
+    onSequenceStart:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
+        DialogueSystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    onSequenceEnd:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+TransformEvent,
+        DialogueSystem, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  questEvents:
+    onQuestStateChange:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    onQuestTrackingEnabled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    onQuestTrackingDisabled:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: PixelCrushers.DialogueSystem.DialogueSystemEvents+StringEvent, DialogueSystem,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    onUpdateQuestTracker:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  pauseEvents:
+    onDialogueSystemPause:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    onDialogueSystemUnpause:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+--- !u!114 &1047729204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1047729197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c593457cd8105e148906690e1707c592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger: 32
+  condition:
+    luaConditions: []
+    questConditions: []
+    acceptedTags: []
+    acceptedGameObjects: []
+    luaWizardIndex: -1
+    lastEvaluationValue: 0
+  setQuestState: 1
+  questName: 
+  questState: 0
+  setQuestEntryState: 0
+  questEntryNumber: 1
+  questEntryState: 0
+  luaCode: 
+  sequence: 
+  sequenceSpeaker: {fileID: 0}
+  sequenceListener: {fileID: 0}
+  waitOneFrameOnStartOrEnable: 1
+  alertMessage: 
+  textTable: {fileID: 0}
+  alertDuration: 0
+  sendMessages: []
+  barkSource: 0
+  barkConversation: 
+  barkText: 
+  barkTextSequence: 
+  barker: {fileID: 0}
+  barkTarget: {fileID: 0}
+  barkOrder: 0
+  allowBarksDuringConversations: 0
+  skipBarkIfNoValidEntries: 0
+  cacheBarkLines: 0
+  conversation: 
+  conversationConversant: {fileID: 0}
+  conversationActor: {fileID: 0}
+  exclusive: 0
+  skipIfNoValidEntries: 1
+  stopConversationOnTriggerExit: 0
+  stopConversationIfTooFar: 0
+  maxConversationDistance: 5
+  monitorConversationDistanceFrequency: 1
+  showCursorDuringConversation: 0
+  pauseGameDuringConversation: 0
+  setActiveActions: []
+  setEnabledActions: []
+  setAnimatorStateActions: []
+  onExecute:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PixelCrushers.GameObjectUnityEvent, PixelCrushers, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  useConversationTitlePicker: 1
+  useBarkTitlePicker: 1
+  useQuestNamePicker: 1
+  selectedDatabase: {fileID: 11400000, guid: ca860202aefd0a94a852e5a32140e6b0, type: 2}
+--- !u!114 &1047729205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1047729197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: 
+  persistentDataName: 
+  portrait: {fileID: 0}
+  barkUISettings:
+    barkUI: {fileID: 0}
+    barkUIOffset: {x: 0, y: 2, z: 0}
+  standardDialogueUISettings:
+    subtitlePanelNumber: 0
+    customSubtitlePanel: {fileID: 0}
+    menuPanelNumber: 0
+    customMenuPanel: {fileID: 0}
+    portraitAnimatorController: {fileID: 0}
+    setSubtitleColor: 0
+    applyColorToPrependedName: 0
+    prependActorNameSeparator: ': '
+    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1093873632 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4659306954667090, guid: aade8d4ced2da6c4da7e353ab3988950,
@@ -2831,6 +3060,99 @@ CharacterController:
   m_PrefabParentObject: {fileID: 143569766000810316, guid: caa9747212a8dd84098e9315617c48c6,
     type: 2}
   m_PrefabInternal: {fileID: 1804105136}
+--- !u!114 &1331823631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1331823629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af33a602e20a3d4ca46c8a6ef942618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_key: Player
+  m_appendSaverTypeToKey: 0
+  m_saveAcrossSceneChanges: 0
+  m_usePlayerSpawnpoint: 0
+--- !u!114 &1331823632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1331823629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 963d6358c55a0f44d8de57bee560f184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useDefaultGUI: 1
+  guiSkin: {fileID: 0}
+  guiStyleName: label
+  alignment: 1
+  color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  textStyle: 1
+  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
+  defaultUseMessage: (spacebar to interact)
+  useKey: 101
+  useButton: Fire2
+  enableTouch: 0
+  touchArea:
+    origin: 0
+    alignment: 0
+    x:
+      scale: 0
+      value: 0
+    y:
+      scale: 0
+      value: 0
+    width:
+      scale: 0
+      value: 0
+    height:
+      scale: 0
+      value: 0
+    minPixelWidth: 0
+    minPixelHeight: 0
+  broadcastToChildren: 1
+  actorTransform: {fileID: 0}
+  onSelectedUsable:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PixelCrushers.DialogueSystem.UsableUnityEvent, DialogueSystem, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onDeselectedUsable:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: PixelCrushers.DialogueSystem.UsableUnityEvent, DialogueSystem, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1331823633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1331823629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: Player
+  persistentDataName: Player__27578
+  portrait: {fileID: 0}
+  barkUISettings:
+    barkUI: {fileID: 0}
+    barkUIOffset: {x: 0, y: 2, z: 0}
+  standardDialogueUISettings:
+    subtitlePanelNumber: 0
+    customSubtitlePanel: {fileID: 0}
+    menuPanelNumber: 0
+    customMenuPanel: {fileID: 0}
+    portraitAnimatorController: {fileID: 0}
+    setSubtitleColor: 0
+    applyColorToPrependedName: 0
+    prependActorNameSeparator: ': '
+    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1331823635 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4348929719211830, guid: caa9747212a8dd84098e9315617c48c6,
@@ -3007,6 +3329,101 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1439829475}
+--- !u!1001 &1547586290
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: initialDatabase
+      value: 
+      objectReference: {fileID: 11400000, guid: ca860202aefd0a94a852e5a32140e6b0,
+        type: 2}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: displaySettings.dialogueUI
+      value: 
+      objectReference: {fileID: 1147256504}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: displaySettings.subtitleSettings.showPCSubtitlesDuringLine
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: displaySettings.subtitleSettings.skipPCSubtitleAfterResponseMenu
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: displaySettings.subtitleSettings.continueButton
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1547586291 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 125852, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+  m_PrefabInternal: {fileID: 1547586290}
+--- !u!114 &1547586292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1547586291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 689b4b1238e337d4590a91183947bcd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_key: 
+  m_appendSaverTypeToKey: 0
+  m_saveAcrossSceneChanges: 1
+--- !u!114 &1547586293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1547586291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc03036aad05c334eab057a96938959a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_saveCurrentScene: 1
+  m_framesToWaitBeforeApplyData: 1
+  m_debug: 0
 --- !u!1 &1582918978
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,7 +3906,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4348929719211830, guid: caa9747212a8dd84098e9315617c48c6, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 114537276219861232, guid: caa9747212a8dd84098e9315617c48c6,
         type: 2}
@@ -3666,7 +4083,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678905570558570, guid: b2960de83cf9d6d48925d3032800752e, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1666301975595672, guid: b2960de83cf9d6d48925d3032800752e, type: 2}
       propertyPath: m_IsActive
@@ -4138,7 +4555,7 @@ Transform:
   m_Children:
   - {fileID: 1690949335}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2028512259
 GameObject:
