@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114537276219861232}
   - component: {fileID: 54862312626898778}
   - component: {fileID: 143569766000810316}
+  - component: {fileID: 114789938340454570}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -71,8 +72,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1095634006722310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.354, y: 1.56, z: -1.556}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -33, y: 1, z: -28}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4056745545748118}
   m_Father: {fileID: 0}
@@ -190,11 +191,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vision: 0
-  player: {fileID: 0}
-  playerCamera: {fileID: 0}
-  playerCameraTransform: {fileID: 0}
+  testTMP: {fileID: 0}
+  dialogueActor: {fileID: 0}
+  player: {fileID: 1095634006722310}
+  playerCamera: {fileID: 1095634006722310}
+  playerCameraTransform: {fileID: 4348929719211830}
   smellOVision: {fileID: 114748111642764316}
-  characterController: {fileID: 0}
+  characterController: {fileID: 143569766000810316}
   smellObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -203,7 +206,7 @@ MonoBehaviour:
   mouseSensitivity: 10
   walkSpeed: 5
   runSpeed: 10
-  gravity: -12
+  gravity: -10
   jumpHeight: 1
   airControlPercent: 0
   turnSmoothTime: 0.5
@@ -212,6 +215,8 @@ MonoBehaviour:
   pitchMinMax: {x: -5, y: 30}
   cameraRotation: 0
   target: {fileID: 4348929719211830}
+  maxVignIntensity: 0.3
+  vignDuration: 0.5
 --- !u!114 &114585567713663986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -236,6 +241,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: f23c4302614bec44fab988ce3e6ad487, type: 2}
+--- !u!114 &114789938340454570
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1095634006722310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  actor: Player
+  persistentDataName: 
+  portrait: {fileID: 0}
+  barkUISettings:
+    barkUI: {fileID: 0}
+    barkUIOffset: {x: 0, y: 2, z: 0}
+  standardDialogueUISettings:
+    subtitlePanelNumber: 0
+    customSubtitlePanel: {fileID: 0}
+    menuPanelNumber: 0
+    customMenuPanel: {fileID: 0}
+    portraitAnimatorController: {fileID: 0}
+    setSubtitleColor: 0
+    applyColorToPrependedName: 0
+    prependActorNameSeparator: ': '
+    subtitleColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!124 &124313721057409522
 Behaviour:
   m_ObjectHideFlags: 1

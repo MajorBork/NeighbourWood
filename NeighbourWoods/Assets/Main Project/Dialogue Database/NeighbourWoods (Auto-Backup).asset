@@ -96,7 +96,7 @@ MonoBehaviour:
     - title: Title
       value: New Conversation 1
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -104,7 +104,7 @@ MonoBehaviour:
     - title: Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Actor
       value: 1
       type: 5
@@ -348,8 +348,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1200
-        y: 120
+        x: 1163.0137
+        y: 115.89041
         width: 160
         height: 30
     - id: 4
@@ -421,7 +421,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1464
+        x: 1428
         y: 144
         width: 160
         height: 30
@@ -488,12 +488,12 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1716
-        y: 144
+        x: 1691.0137
+        y: 163.89041
         width: 160
         height: 30
-    canvasScrollPosition: {x: 187.83745, y: 29.332205}
-    canvasZoom: 0.37000045
+    canvasScrollPosition: {x: 354.9336, y: 29.517494}
+    canvasZoom: 0.5700003
   syncInfo:
     syncActors: 0
     syncItems: 0
