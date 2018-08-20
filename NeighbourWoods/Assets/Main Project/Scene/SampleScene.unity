@@ -865,6 +865,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11424616, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: onUseKeyboard.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 425660, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -902,6 +906,14 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: ca860202aefd0a94a852e5a32140e6b0,
         type: 2}
+    - target: {fileID: 11424616, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: onUseKeyboard.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11424616, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
+      propertyPath: onUseKeyboard.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 58ac37417e60e534f91138088a3e6f70, type: 2}
   m_IsPrefabParent: 0
@@ -4272,7 +4284,7 @@ Prefab:
     - target: {fileID: 224466324178712132, guid: 0c45b33b4d3b59949ab427bc57fe3fae,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.0000076293945
+      value: -0.000022888184
       objectReference: {fileID: 0}
     - target: {fileID: 224703035837801188, guid: 0c45b33b4d3b59949ab427bc57fe3fae,
         type: 2}
@@ -6033,6 +6045,7 @@ GameObject:
   - component: {fileID: 1101306665}
   - component: {fileID: 1101306664}
   - component: {fileID: 1101306673}
+  - component: {fileID: 1101306666}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6068,6 +6081,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: []
+--- !u!114 &1101306666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1101306663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1256a25febc09fe41aa3b470cbe88db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  day: 0
+  timeSlot: 0
+  sceneLight: {fileID: 170076734}
+  morningLightColour: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  middayLightColour: {r: 1, g: 0.7708238, b: 0.6084906, a: 1}
+  afternoonLightColour: {r: 1, g: 0.4009289, b: 0.19339621, a: 1}
+  eveningLightColour: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1101306667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6159,7 +6190,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.7708238, b: 0.6084906, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -7159,25 +7190,6 @@ Transform:
   m_Father: {fileID: 1646615462}
   m_RootOrder: 96
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
---- !u!1 &1294990716 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1126084200582714, guid: 3da36d276179b404caa3fd39685c11a3,
-    type: 2}
-  m_PrefabInternal: {fileID: 1576266617}
---- !u!114 &1294990726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1294990716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc03036aad05c334eab057a96938959a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_saveCurrentScene: 1
-  m_framesToWaitBeforeApplyData: 1
-  m_debug: 0
 --- !u!1 &1313636456
 GameObject:
   m_ObjectHideFlags: 0
@@ -8511,7 +8523,8 @@ Prefab:
       propertyPath: conversationActor
       value: 
       objectReference: {fileID: 888695588}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114035379394441358, guid: 3da36d276179b404caa3fd39685c11a3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3da36d276179b404caa3fd39685c11a3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1603561808
@@ -11621,7 +11634,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.4009289, b: 0.19339621, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30

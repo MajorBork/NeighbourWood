@@ -119,7 +119,7 @@ MonoBehaviour:
     - title: Name
       value: New Quest 1
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Pictures
       value: '[]'
       type: 3
@@ -127,23 +127,55 @@ MonoBehaviour:
     - title: Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Success Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Failure Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: State
-      value: unassigned
+      value: (None)
       type: 0
-      typeString: 
+      typeString: CustomFieldType_QuestState
     - title: Is Item
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
+    - title: Trackable
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: 
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Track
+      value: True
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Entry Count
+      value: 2
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Entry 1 State
+      value: active
+      type: 0
+      typeString: 
+    - title: Entry 1
+      value: 
+      type: 0
+      typeString: 
+    - title: Entry 2 State
+      value: unassigned
+      type: 0
+      typeString: 
+    - title: Entry 2
+      value: 
+      type: 0
+      typeString: 
   - id: 2
     fields:
     - title: Name
@@ -176,6 +208,20 @@ MonoBehaviour:
       typeString: CustomFieldType_Number
     - title: Description
       value: The Currency of the Game
+      type: 0
+      typeString: 
+  - id: 2
+    fields:
+    - title: Name
+      value: TaskPoints
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: 
       type: 0
       typeString: 
   conversations:
@@ -1324,7 +1370,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: SetQuestState("success")
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -1461,7 +1507,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: Variable["Food"] == 0
       userScript: 
       onExecute:
         m_PersistentCalls:

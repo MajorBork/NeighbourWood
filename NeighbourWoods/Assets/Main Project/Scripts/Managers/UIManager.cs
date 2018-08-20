@@ -47,7 +47,7 @@ namespace Manager.UI
 
         }
         #endregion
-        #region Dialogue Event and Listeners
+        #region Listeners
         void OnEnable()
         {
             GameEvents.OnGameStateChange += OnGameStateChange;
@@ -58,6 +58,8 @@ namespace Manager.UI
             GameEvents.OnGameStateChange -= OnGameStateChange;
             GameEvents.OnTimeChange -= OnTimeChange;
         }
+        #endregion
+        #region OnGameStateChange
         void OnGameStateChange(GameState gameState)
         {
             if (gameState == GameState.DIALOGUE)
@@ -69,6 +71,8 @@ namespace Manager.UI
                 dialogueBoxCanvas.alpha = 0;
             }
         }
+        #endregion
+        #region OnTimeChange
         void OnTimeChange(TimeSlot timeSlot, Day day)
         {
             StartCoroutine(WhileFadeCanvas(timeSlot, day));
@@ -77,7 +81,7 @@ namespace Manager.UI
         {
             fadeCanvas.DOFade(1, fadeInTime);
             yield return new WaitForSeconds(fadeInTime * 2);
-            string temp = timeSlot.ToString();
+            //string temp = timeSlot.ToString();
             //temp.ToLower();
             timeText.text = timeSlot.ToString();
             dayText.text = day.ToString();

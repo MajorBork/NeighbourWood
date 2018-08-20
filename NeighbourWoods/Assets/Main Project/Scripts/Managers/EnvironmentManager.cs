@@ -10,14 +10,32 @@ namespace Manager.Environment
         public Day day;
         public TimeSlot timeSlot;
         public Light sceneLight;
+        public Color morningLightColour;
+        public Color middayLightColour;
+        public Color afternoonLightColour;
+        public Color eveningLightColour;
         void Start()// Use this for initialization
         {
 
         }
-
         void Update()// Update is called once per frame
         {
-
+            switch (LevelManager.instance.timeSlot)
+            {
+                case TimeSlot.MORNING: // if the GameState enum is in FreeRoam then all of the movement and button controls updates
+                    sceneLight.color = morningLightColour;
+                    break;
+                case TimeSlot.MIDDAY:
+                    sceneLight.color = middayLightColour;
+                    break;
+                case TimeSlot.AFTERNOON:
+                    sceneLight.color = afternoonLightColour;
+                    break;
+                case TimeSlot.EVENING:
+                    sceneLight.color = eveningLightColour;
+                    break;
+                default: break;
+            }
         }
         void OnEnable()
         {
@@ -29,7 +47,7 @@ namespace Manager.Environment
         }
         void OnTimeChange(TimeSlot timeSlot, Day day)
         {
-            //sceneLight.color
+            
         }
     }
     [Groups("Base Settings")]

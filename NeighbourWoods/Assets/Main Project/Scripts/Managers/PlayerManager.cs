@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
 using PixelCrushers.DialogueSystem;
+using Language.Lua;
 namespace Manager.Player
 {
     #region Vision Enum
@@ -21,7 +22,8 @@ namespace Manager.Player
         #region Variables
         public Vision vision;
         public TMP_Text testTMP;
-        public DatabaseManager databaseManager;
+        public LuaNetworkCommands Lua;
+        public DialogueDatabase neighbourWoodsDatabase;
         public DialogueActor dialogueActor;
         #region Object Variables
         // All of the Variables that link to objects or components
@@ -72,6 +74,7 @@ namespace Manager.Player
         #region Start() and Update()
         void Start() // Use this for initialization
         {
+            //neighbourWoodsDatabase.variables.
             player = GameObject.FindWithTag("Player");
             playerCamera = GameObject.FindWithTag("MainCamera");
             playerCameraTransform = Camera.main.transform;
@@ -292,6 +295,10 @@ namespace Manager.Player
                     smellObject.SetActive(true);
                 }
             }
+        }
+        public void OnConversationStart(Transform actor)
+        {
+            
         }
         #endregion
         #endregion
