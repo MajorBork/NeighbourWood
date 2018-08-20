@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using EasyEditor;
 using UnityEngine;
 using Manager.Task;
+using PixelCrushers.DialogueSystem;
 
 namespace Manager.Level
 {
@@ -84,18 +85,30 @@ namespace Manager.Level
         #region Start and Update Methods
         void Start() // Use this for initialization
         {
-
+            timeSlot = TimeSlot.MORNING;
+            day = Day.DAY_1;
         }
         void Update() // Update is called once per frame
         {
 
         }
         #endregion
-        void UpdateTime() // updates our time to the next increment 
+        public void UpdateTime() // updates our time to the next increment 
         {
-            // if increment > max add 1 to day
-            // resets increment 
+            timeSlot++;
+            if ((int)timeSlot == 4)
+            {
+                day++;    
+                timeSlot = TimeSlot.MORNING;
+                if ((int)day == 7)
+                {
+                    // make gameevent reportgameover 
+                    //DialogueDatabase.Contains()
+                }
+            }
+            GameEvents.ReportOnTimeChange(timeSlot,day);
         }
+        
     }
     #endregion
     #region Levels Class
