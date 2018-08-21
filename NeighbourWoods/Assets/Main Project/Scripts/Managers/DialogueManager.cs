@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Manager.Character;
 using TMPro;
 using DG.Tweening;
 using EasyEditor;
 using PixelCrushers.DialogueSystem;
 using Language.Lua;
+using Manager.Character;
+using Manager.Environment;
 namespace Manager.Dialogue 
 {
     #region DialogueManager Class
@@ -17,18 +18,30 @@ namespace Manager.Dialogue
         public LuaNetworkCommands Lua;
         public DialogueDatabase neighbourWoodsDatabase;
         public DialogueActor playerActor;
+        public DialogueActor TestCharacter;
+        public DialogueActor TestCharacter2;
+        public DialogueActor TestCharacter3;
+        public EnvironmentManager environmentManager;
+        public DialogueEntry afternoonTimeChange;
+        public string food;
+        public int conversationID;
+        public int dialogueEntryID;
         public GameState gameState;
         #endregion
         #region Start and Update Methods
         void Start() // Use this for initialization
         {
-
+            //IfActorSpoke();
         }
         void Update() // Use this for initialization
         {
-            //neighbourWoodsDatabase.GetDialogueEntry(int conversationID, int dialogueEntryID);
+            
         }
         #endregion
+        void GetConversation()
+        {
+
+        }
     }
     #endregion
     #region DialogueList Class

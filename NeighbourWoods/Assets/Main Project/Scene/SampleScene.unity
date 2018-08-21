@@ -3109,6 +3109,12 @@ Transform:
   m_Father: {fileID: 1646615462}
   m_RootOrder: 98
   m_LocalEulerAnglesHint: {x: 0, y: -45.885002, z: 0}
+--- !u!114 &730793229 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114789938340454570, guid: caa9747212a8dd84098e9315617c48c6,
+    type: 2}
+  m_PrefabInternal: {fileID: 470809078}
+  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
 --- !u!1 &751713170
 GameObject:
   m_ObjectHideFlags: 0
@@ -4284,7 +4290,7 @@ Prefab:
     - target: {fileID: 224466324178712132, guid: 0c45b33b4d3b59949ab427bc57fe3fae,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000030517578
+      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 224703035837801188, guid: 0c45b33b4d3b59949ab427bc57fe3fae,
         type: 2}
@@ -4776,7 +4782,8 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: -0.94903564
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114394868107105492, guid: 0c45b33b4d3b59949ab427bc57fe3fae, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0c45b33b4d3b59949ab427bc57fe3fae, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &871725470
@@ -5187,6 +5194,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: questEvents.onQuestStateChange.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4189705999771048, guid: 3da36d276179b404caa3fd39685c11a3, type: 2}
       propertyPath: m_LocalPosition.x
       value: -18
@@ -5256,13 +5268,28 @@ Prefab:
     - target: {fileID: 114586278785658034, guid: 3da36d276179b404caa3fd39685c11a3,
         type: 2}
       propertyPath: actor
-      value: TestCharacter 2
+      value: TestCharacter 3
       objectReference: {fileID: 0}
     - target: {fileID: 114975349226267846, guid: 3da36d276179b404caa3fd39685c11a3,
         type: 2}
       propertyPath: conversation
-      value: Test Conversation 2
+      value: Test Conversation 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: questEvents.onQuestStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: questEvents.onQuestStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: questEvents.onQuestStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2102610962}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3da36d276179b404caa3fd39685c11a3, type: 2}
   m_IsPrefabParent: 0
@@ -6046,6 +6073,7 @@ GameObject:
   - component: {fileID: 1101306664}
   - component: {fileID: 1101306673}
   - component: {fileID: 1101306666}
+  - component: {fileID: 1101306668}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -6111,6 +6139,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cosmeticList: []
+--- !u!114 &1101306668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1101306663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac1e11ce8ba8d704fbb860efeff2dd8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lua: {fileID: 0}
+  neighbourWoodsDatabase: {fileID: 11400000, guid: ca860202aefd0a94a852e5a32140e6b0,
+    type: 2}
+  playerActor: {fileID: 730793229}
+  TestCharacter: {fileID: 0}
+  TestCharacter2: {fileID: 0}
+  TestCharacter3: {fileID: 0}
+  environmentManager: {fileID: 1101306666}
+  afternoonTimeChange:
+    id: 0
+    fields: []
+    conversationID: 0
+    isRoot: 0
+    isGroup: 0
+    nodeColor: 
+    delaySimStatus: 0
+    falseConditionAction: 
+    conditionPriority: 2
+    outgoingLinks: []
+    conditionsString: 
+    userScript: 
+    onExecute:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    canvasRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 160
+      height: 30
+  food: Food
+  conversationID: 4
+  dialogueEntryID: 4
+  gameState: 0
 --- !u!114 &1101306669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8442,6 +8517,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114975349226267846, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: sendMessages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4189705999771048, guid: 3da36d276179b404caa3fd39685c11a3, type: 2}
       propertyPath: m_LocalPosition.x
       value: -49
@@ -8523,6 +8603,11 @@ Prefab:
       propertyPath: conversationActor
       value: 
       objectReference: {fileID: 888695588}
+    - target: {fileID: 114975349226267846, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: sendMessages.Array.data[0].gameObject
+      value: 
+      objectReference: {fileID: 1101306663}
     m_RemovedComponents:
     - {fileID: 114035379394441358, guid: 3da36d276179b404caa3fd39685c11a3, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3da36d276179b404caa3fd39685c11a3, type: 2}
