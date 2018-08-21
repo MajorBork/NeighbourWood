@@ -192,6 +192,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vision: 0
   testTMP: {fileID: 0}
+  Lua: {fileID: 0}
+  neighbourWoodsDatabase: {fileID: 11400000, guid: ca860202aefd0a94a852e5a32140e6b0,
+    type: 2}
   dialogueActor: {fileID: 0}
   player: {fileID: 1095634006722310}
   playerCamera: {fileID: 1095634006722310}
@@ -253,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actor: Player
-  persistentDataName: 
+  persistentDataName: Player
   portrait: {fileID: 0}
   barkUISettings:
     barkUI: {fileID: 0}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using EasyEditor;
 using UnityEngine;
 using Manager.Task;
+using Manager.Player;
 using PixelCrushers.DialogueSystem;
 
 namespace Manager.Level
@@ -108,7 +109,6 @@ namespace Manager.Level
             }
             GameEvents.ReportOnTimeChange(timeSlot,day);
         }
-        
     }
     #endregion
     #region Levels Class

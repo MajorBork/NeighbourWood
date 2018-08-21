@@ -22,9 +22,6 @@ namespace Manager.Player
         #region Variables
         public Vision vision;
         public TMP_Text testTMP;
-        public LuaNetworkCommands Lua;
-        public DialogueDatabase neighbourWoodsDatabase;
-        public DialogueActor dialogueActor;
         #region Object Variables
         // All of the Variables that link to objects or components
         public GameObject player;
@@ -34,12 +31,7 @@ namespace Manager.Player
         public CharacterController characterController;
         public GameObject[] smellObjects = new GameObject[0];
         #endregion
-        #region Controls Variables
-        //Old movement variables
-        //public int forwardSpeed = 10;
-        //public int backwardSpeed = 10;
-        //public int leftSpeed = 10;
-        //public int rightSpeed = 10;
+        #region Control Variables
         //Space//
         //All of the controls variables used in the control functions
         public float mouseSensitivity = 10;
@@ -63,6 +55,8 @@ namespace Manager.Player
         public Transform target;
         private float yaw = 0;
         private float pitch = 0;
+        #endregion
+        #region Vision Variables
         [SerializeField]
         public float maxVignIntensity = 0.3f;
         [SerializeField]
@@ -138,25 +132,6 @@ namespace Manager.Player
             //float animationSpeedPercent = ((running) ? currentSpeed/runSpeed : currentSpeed/walkSpeed* .5f);
             //animator.SetFloat("speedPercent", animationSpeedPercent, speedSmoothTime, Time.deltaTime);
             //currentSpeed = new Vector2(characterController.velocity.x, characterContoller.velocity.z).magnitude;
-            #endregion
-            #region Old MovementCode
-            // Old movement code
-            //if (Input.GetKey(KeyCode.W))
-            //{
-            //    transform.position += Vector3.forward * Time.deltaTime * forwardSpeed;
-            //}
-            //if (Input.GetKey(KeyCode.A))
-            //{
-            //    transform.position += Vector3.left * Time.deltaTime * leftSpeed;
-            //}
-            //if (Input.GetKey(KeyCode.D))
-            //{
-            //    transform.position += Vector3.right * Time.deltaTime * rightSpeed;
-            //}
-            //if (Input.GetKey(KeyCode.S))
-            //{
-            //    transform.position += Vector3.back * Time.deltaTime * backwardSpeed;
-            //}
             #endregion
         }
         float GetModifiedSmoothTime(float smoothTime) // The Function that allows me to control the amount of movement that the player has when in the air

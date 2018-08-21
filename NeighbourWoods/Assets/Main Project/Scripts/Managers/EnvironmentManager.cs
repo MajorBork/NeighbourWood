@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using EasyEditor;
 using Manager.Level;
+using PixelCrushers.DialogueSystem;
+using Language.Lua;
 namespace Manager.Environment
 {
     public class EnvironmentManager : Singleton<EnvironmentManager>
@@ -20,7 +22,7 @@ namespace Manager.Environment
         }
         void Update()// Update is called once per frame
         {
-            switch (LevelManager.instance.timeSlot)
+            switch (Level.LevelManager.instance.timeSlot)
             {
                 case TimeSlot.MORNING: // if the GameState enum is in FreeRoam then all of the movement and button controls updates
                     sceneLight.color = morningLightColour;
