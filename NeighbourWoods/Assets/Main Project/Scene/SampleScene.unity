@@ -4290,7 +4290,7 @@ Prefab:
     - target: {fileID: 224466324178712132, guid: 0c45b33b4d3b59949ab427bc57fe3fae,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000030517578
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 224703035837801188, guid: 0c45b33b4d3b59949ab427bc57fe3fae,
         type: 2}
@@ -4780,7 +4780,7 @@ Prefab:
     - target: {fileID: 224013382333608140, guid: 0c45b33b4d3b59949ab427bc57fe3fae,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.94903564
+      value: -0.9489746
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114394868107105492, guid: 0c45b33b4d3b59949ab427bc57fe3fae, type: 2}
@@ -5196,7 +5196,17 @@ Prefab:
     m_Modifications:
     - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
         type: 2}
-      propertyPath: questEvents.onQuestStateChange.m_PersistentCalls.m_Calls.Array.size
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onConversationLineEnd.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onLinkedConversationStart.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4189705999771048, guid: 3da36d276179b404caa3fd39685c11a3, type: 2}
@@ -5231,65 +5241,100 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1126084200582714, guid: 3da36d276179b404caa3fd39685c11a3, type: 2}
-      propertyPath: m_Name
-      value: TestCharacter (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 114975349226267846, guid: 3da36d276179b404caa3fd39685c11a3,
         type: 2}
       propertyPath: conversationConversant
       value: 
       objectReference: {fileID: 888695588}
-    - target: {fileID: 65696383102709200, guid: 3da36d276179b404caa3fd39685c11a3,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 65696383102709200, guid: 3da36d276179b404caa3fd39685c11a3,
-        type: 2}
-      propertyPath: m_Center.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 65696383102709200, guid: 3da36d276179b404caa3fd39685c11a3,
-        type: 2}
-      propertyPath: m_Center.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 65696383102709200, guid: 3da36d276179b404caa3fd39685c11a3,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 65696383102709200, guid: 3da36d276179b404caa3fd39685c11a3,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114586278785658034, guid: 3da36d276179b404caa3fd39685c11a3,
-        type: 2}
-      propertyPath: actor
-      value: TestCharacter 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114975349226267846, guid: 3da36d276179b404caa3fd39685c11a3,
-        type: 2}
-      propertyPath: conversation
-      value: Test Conversation 3
+    - target: {fileID: 1126084200582714, guid: 3da36d276179b404caa3fd39685c11a3, type: 2}
+      propertyPath: m_Name
+      value: TestCharacter (2)
       objectReference: {fileID: 0}
     - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
         type: 2}
-      propertyPath: questEvents.onQuestStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
         type: 2}
-      propertyPath: questEvents.onQuestStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
         type: 2}
-      propertyPath: questEvents.onQuestStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2102610962}
+      objectReference: {fileID: 1101306664}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onLinkedConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onLinkedConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onLinkedConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1101306664}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onLinkedConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateTime
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onLinkedConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateTime
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onConversationLineEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onConversationLineEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onConversationLineEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1101306664}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onConversationLineEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpdateTime
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onConversationLineEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onConversationLineEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
+        type: 2}
+      propertyPath: conversationEvents.onConversationLineEnd.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3da36d276179b404caa3fd39685c11a3, type: 2}
   m_IsPrefabParent: 0
@@ -8609,7 +8654,7 @@ Prefab:
       value: 
       objectReference: {fileID: 1101306663}
     m_RemovedComponents:
-    - {fileID: 114035379394441358, guid: 3da36d276179b404caa3fd39685c11a3, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 3da36d276179b404caa3fd39685c11a3, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1603561808

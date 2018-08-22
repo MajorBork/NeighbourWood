@@ -7,8 +7,10 @@ using PixelCrushers.DialogueSystem;
 using Language.Lua;
 namespace Manager.Environment
 {
+
     public class EnvironmentManager : Singleton<EnvironmentManager>
     {
+        #region Variables
         public Day day;
         public TimeSlot timeSlot;
         public Light sceneLight;
@@ -16,6 +18,7 @@ namespace Manager.Environment
         public Color middayLightColour;
         public Color afternoonLightColour;
         public Color eveningLightColour;
+        #endregion
         void Start()// Use this for initialization
         {
 
@@ -39,18 +42,20 @@ namespace Manager.Environment
                 default: break;
             }
         }
-        void OnEnable()
-        {
-            GameEvents.OnTimeChange += OnTimeChange;
-        }
-        void OnDisable()
-        {
-            GameEvents.OnTimeChange -= OnTimeChange;
-        }
-        void OnTimeChange(TimeSlot timeSlot, Day day)
-        {
-            
-        }
+        #region OnTimeChange Event Listerers To be used later?
+        //void OnEnable()
+        //{
+        //    GameEvents.OnTimeChange += OnTimeChange;
+        //}
+        //void OnDisable()
+        //{
+        //    GameEvents.OnTimeChange -= OnTimeChange;
+        //}
+        //void OnTimeChange(TimeSlot timeSlot, Day day)
+        //{
+        //    
+        //}
+        #endregion
     }
     [Groups("Base Settings")]
     [System.Serializable]

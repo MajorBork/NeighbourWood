@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 114586278785658034}
   - component: {fileID: 114975349226267846}
   - component: {fileID: 114689266081349968}
-  - component: {fileID: 114035379394441358}
   - component: {fileID: 64330872971966032}
   - component: {fileID: 65696383102709200}
   m_Layer: 0
@@ -42,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126084200582714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -49, y: 1, z: -32}
+  m_LocalPosition: {x: -18, y: 1, z: -61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -111,26 +110,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1126084200582714}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &114035379394441358
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1126084200582714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1af33a602e20a3d4ca46c8a6ef942618, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_key: TestCharacter
-  m_appendSaverTypeToKey: 0
-  m_saveAcrossSceneChanges: 0
-  m_usePlayerSpawnpoint: 0
+  m_Size: {x: 5, y: 2, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114586278785658034
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: 
+  actor: TestCharacter 3
   persistentDataName: 
   portrait: {fileID: 0}
   barkUISettings:
@@ -319,7 +303,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: New Conversation 1
+  conversation: Test Conversation 3
   conversationConversant: {fileID: 0}
   conversationActor: {fileID: 4189705999771048}
   exclusive: 0

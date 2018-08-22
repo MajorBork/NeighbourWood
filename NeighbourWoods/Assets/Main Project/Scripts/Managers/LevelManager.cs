@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using EasyEditor;
 using UnityEngine;
 using Manager.Task;
-using Manager.Player;
-using PixelCrushers.DialogueSystem;
+//using Manager.Player;
+//using PixelCrushers.DialogueSystem;
 
 namespace Manager.Level
 {
@@ -70,7 +70,7 @@ namespace Manager.Level
         THE_CLEARING,
         KELPIE_POOL,
         UNICORN_GLADE,
-        THE_MYSTERIOUS_ENTITYS_LAIR
+        THE_MYSTERIOUS_ENTITYS_LAIR,
     }
     #endregion
     #region LevelManager Class
@@ -103,7 +103,7 @@ namespace Manager.Level
                 timeSlot = TimeSlot.MORNING;
                 if ((int)day == 7)
                 {
-                    // make gameevent reportgameover 
+                    //make gameevent reportgameover 
                     //DialogueDatabase.Contains()
                 }
             }
@@ -116,11 +116,9 @@ namespace Manager.Level
     [System.Serializable]
     public class Levels
     {
-        #region Array Variables
         public LocationID locationID; 
         public BoxCollider areaCollider;
         public Tasks tasksInArea;
-        #endregion
     }
     #endregion
 }
