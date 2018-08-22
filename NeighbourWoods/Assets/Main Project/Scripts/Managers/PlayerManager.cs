@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
 using UnityEngine.UI;
+using Manager.UI;
 using TMPro;
 using DG.Tweening;
 using PixelCrushers.DialogueSystem;
@@ -25,6 +26,7 @@ namespace Manager.Player
         #region Object Variables
         // All of the Variables that link to objects or components
         public GameObject player;
+        public UIManager gameManagerUI;
         public GameObject playerCamera;
         public Transform playerCameraTransform;
         public PostProcessingBehaviour smellOVision;
@@ -95,6 +97,7 @@ namespace Manager.Player
                     BarkController();
                     DigController();
                     JumpController();
+                    InventoryController();
                     break;
                 case GameState.DIALOGUE: // if the GameState enum is in Dialogue then the DialogueController() updates 
                     DialogueController();
@@ -224,6 +227,19 @@ namespace Manager.Player
             }
         }
         #endregion
+        #region InventoryController()
+        void InventoryController()
+        {
+            if (Input.GetButton("Inventory"))
+            {
+                gameManagerUI.inventoryCanvas.DOFade(1, 0.3f);
+            }
+            else
+            {
+                gameManagerUI.inventoryCanvas.DOFade(0, 0.3f);
+            }
+        }
+        #endregion
         void MapController()
         {
             if (Input.GetButtonDown("Map"))
@@ -238,7 +254,6 @@ namespace Manager.Player
         }
         #endregion
         #region Event Methods
-        #region Vision Event and Listeners
         void OnEnable() //Subscribes to our game events
         {
             GameEvents.OnVisionChange += OnVisionChange;
@@ -247,7 +262,7 @@ namespace Manager.Player
         {
             GameEvents.OnVisionChange -= OnVisionChange;
         }
-        float visionLevel;
+        //float visionLevel;
         void OnVisionChange(Vision vision)
         {
             //Debug.Log("vision mode");
@@ -275,7 +290,6 @@ namespace Manager.Player
         {
             
         }
-        #endregion
         #endregion
     }
     #endregion

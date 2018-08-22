@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using UnityEngine;
 using Manager.Level;
 using DG.Tweening;
+using Language.Lua;
+using PixelCrushers.DialogueSystem;
 using TMPro;
 
 namespace Manager.UI 
@@ -15,8 +17,11 @@ namespace Manager.UI
         public CanvasGroup dialogueBoxCanvas;
         public CanvasGroup buttonPressBox;
         public CanvasGroup fadeCanvas;
+        public CanvasGroup inventoryCanvas;
         public TextMeshProUGUI dayText;
         public TextMeshProUGUI timeText;
+        public int taskPoints;
+        public int newTaskPoints;
         public float fadeInTime = 1;
         #endregion
         #region Start and Update
@@ -27,10 +32,12 @@ namespace Manager.UI
             fadeCanvas.alpha = 0;
             timeText.text = "";
             dayText.text = "";
+            taskPoints = DialogueLua.GetVariable("TaskPoints").asInt;
         }
         void Update() // Update is called once per frame
         {
-
+            //OnTaskPointsChange(taskPoints);
+            Debug.Log(taskPoints);
         }
         #endregion
         #region Methods
@@ -91,6 +98,11 @@ namespace Manager.UI
             timeText.text = "";
             dayText.text = "";
         }
+        //void OnTaskPointsChange(LuaWatchItem luaWatchItem, Lua.Result newValue)
+        //{
+        //    DialogueManager.AddLuaObserver("Variable['TaskPoints']", LuaWatchFrequency.EveryDialogueEntry, OnTaskPointsChange);
+        //    Debug.Log("Number of TaskPoints change to: " + newValue.AsInt);
+        //}
         #endregion
     }
     #endregion
