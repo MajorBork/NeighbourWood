@@ -240,6 +240,7 @@ namespace Manager.Player
             }
         }
         #endregion
+        #region MapController()
         void MapController()
         {
             if (Input.GetButtonDown("Map"))
@@ -248,6 +249,7 @@ namespace Manager.Player
                 //testTMP.text = ("Map to be coded");
             }
         }
+        #endregion
         void DialogueController()
         {
 

@@ -22,7 +22,6 @@ namespace Manager.Dialogue
         public DialogueActor TestCharacter2;
         public DialogueActor TestCharacter3;
         public EnvironmentManager environmentManager;
-        public DialogueEntry afternoonTimeChange;
         public string food;
         public int conversationID;
         public int dialogueEntryID;
@@ -35,12 +34,16 @@ namespace Manager.Dialogue
         }
         void Update() // Use this for initialization
         {
-            
+            GetConversation();
         }
         #endregion
         void GetConversation()
         {
-
+            DialogueLua.DoesVariableExist(food);
+            if (DialogueLua.DoesVariableExist(food))
+            {
+                
+            }
         }
     }
     #endregion
