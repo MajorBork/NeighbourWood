@@ -31,15 +31,15 @@ public class OldCodeManager
     //public TMP_Text playerDialogueText;
     //private Queue<string> sentences;
     //public List<string> sent;
-    void Start()
-    {
+    //void Start()
+    //{
         //sentences = new Queue<string>();
         //sent = new List<string>();
-    }
-    void Update()
-    {
+    //}
+    //void Update()
+    //{
 
-    }
+    //}
     // Old movement code
     //if (Input.GetKey(KeyCode.W))
     //{

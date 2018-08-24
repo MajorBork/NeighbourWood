@@ -1,3 +1,0 @@
-/*
-This folder contains Dialogue System support for TextMesh Pro.
-*/

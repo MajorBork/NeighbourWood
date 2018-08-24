@@ -40,9 +40,12 @@ namespace Manager.Dialogue
         void GetConversation()
         {
             DialogueLua.DoesVariableExist(food);
-            if (DialogueLua.DoesVariableExist(food))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
-                
+                if (DialogueLua.DoesVariableExist(food))
+                {
+                    Debug.Log(DialogueLua.DoesVariableExist(food));
+                }
             }
         }
     }
