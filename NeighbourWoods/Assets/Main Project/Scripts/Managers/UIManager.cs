@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using Manager.Level;
+using Manager.Inventory;
 using DG.Tweening;
 using Language.Lua;
 using PixelCrushers.DialogueSystem;
@@ -37,13 +38,13 @@ namespace Manager.UI
         void Update() // Update is called once per frame
         {
             //OnTaskPointsChange(taskPoints);
-            Debug.Log(taskPoints);
+            //Debug.Log(taskPoints);
         }
         #endregion
         #region Methods
         void UpdateItem()
         {
-            // replaces inventory icon 
+            // replaces inventoryVis icon 
         }
         void AssigningItems()
         {

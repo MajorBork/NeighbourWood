@@ -5,6 +5,7 @@ using UnityEngine;
 using Manager.Player;
 using Manager.Level;
 using Manager;
+using Manager.Inventory;
 
 public static class GameEvents 
 {
@@ -12,8 +13,9 @@ public static class GameEvents
     public static event Action<Vision> OnVisionChange = null;
     public static event Action<GameState> OnGameStateChange = null;
     public static event Action<Day> OnDayChange = null;
-    public static event Action<TimeSlot> OnTimeSlotChange = null;
+    //public static event Action<TimeSlot> OnTimeSlotChange = null;
     public static event Action<TimeSlot, Day> OnTimeChange = null;
+    public static event Action<bool> OnInventoryVisChange = null;
     //public static event Action<Tasks> OnTaskStartedChange = null;
     #endregion
     #region Events
@@ -40,18 +42,25 @@ public static class GameEvents
             OnDayChange(day);
         }
     }
-    public static void ReportOnTimeSlotChange(TimeSlot timeSlot)
-    {
-        if (OnTimeSlotChange != null)
-        {
-            OnTimeSlotChange(timeSlot);
-        }
-    }
+    //public static void ReportOnTimeSlotChange(TimeSlot timeSlot)
+    //{
+    //    if (OnTimeSlotChange != null)
+    //    {
+    //        OnTimeSlotChange(timeSlot);
+    //    }
+    //}
     public static void ReportOnTimeChange(TimeSlot timeSlot, Day day)
     {
         if (OnTimeChange != null)
         {
             OnTimeChange(timeSlot,day);
+        }
+    }
+    public static void ReportOnInventoryChange(bool inventoryShowing)
+    {
+        if (OnInventoryVisChange != null)
+        {
+            OnInventoryVisChange(inventoryShowing);
         }
     }
     #endregion

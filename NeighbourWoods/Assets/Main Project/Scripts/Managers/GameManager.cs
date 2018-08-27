@@ -24,6 +24,7 @@ namespace Manager
         public ItemType itemType;
         public GameState gameState;
         public Image startScreen;
+        
         void Start()
         {
             
@@ -39,24 +40,7 @@ namespace Manager
                 startScreen.DOFade(0, 0.3f);
             }
         }
-        public void StartDialogue()
-        {
-            Debug.Log("Start of converstion.");
-            if (gameState == GameState.FREE_ROAM)
-            {
-                gameState = GameState.DIALOGUE;
-            }
-            GameEvents.ReportGameStateChange(GameState.DIALOGUE);
-        }
-        public void EndDialogue()
-        {
-            Debug.Log("End of converstion.");
-            if (gameState == GameState.DIALOGUE)
-            {
-                gameState = GameState.FREE_ROAM;
-            }
-            GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
-        }
+        
         //void OnEnable() //Subscribes to our game events
         //{
         //    GameEvents.OnGameStateChange += OnGameStateChange;

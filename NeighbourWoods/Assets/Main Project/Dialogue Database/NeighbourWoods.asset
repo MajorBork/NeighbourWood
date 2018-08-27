@@ -1308,8 +1308,8 @@ MonoBehaviour:
         y: 240
         width: 160
         height: 30
-    canvasScrollPosition: {x: 51.696766, y: 50.85107}
-    canvasZoom: 0.7000003
+    canvasScrollPosition: {x: 13.114746, y: 0}
+    canvasZoom: 0.6100004
   - id: 4
     fields:
     - title: Title
@@ -1722,8 +1722,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 648
-        y: 144
+        x: 639
+        y: 138
         width: 160
         height: 30
     canvasScrollPosition: {x: 0, y: 0}

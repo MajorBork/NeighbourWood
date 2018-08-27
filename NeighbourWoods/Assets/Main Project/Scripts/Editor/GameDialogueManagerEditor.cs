@@ -1,9 +1,9 @@
 ﻿using UnityEditor;
 using EasyEditor;
-using Manager.Dialogue;
+using Manager.GameDialogue;
 
 [Groups("Base Settings")]
-[CustomEditor(typeof(DialogueManager))]
+[CustomEditor(typeof(GameDialogueManager))]
 public class DialogueManagerEditor : EasyEditorBase
 {
 

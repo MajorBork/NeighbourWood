@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.PostProcessing;
 using UnityEngine.UI;
 using Manager.UI;
+using Manager.Inventory;
 using TMPro;
 using DG.Tweening;
 using PixelCrushers.DialogueSystem;
@@ -35,7 +36,7 @@ namespace Manager.Player
         #endregion
         #region Control Variables
         //Space//
-        //All of the controls variables used in the control functions
+        //All of the controls variables used in the movement functions
         public float mouseSensitivity = 10;
         public float walkSpeed = 2;
         public float runSpeed = 6;
@@ -230,13 +231,10 @@ namespace Manager.Player
         #region InventoryController()
         void InventoryController()
         {
-            if (Input.GetButton("Inventory"))
+            if (Input.GetButtonDown("Inventory"))
             {
-                gameManagerUI.inventoryCanvas.DOFade(1, 0.3f);
-            }
-            else
-            {
-                gameManagerUI.inventoryCanvas.DOFade(0, 0.3f);
+                InventoryManager.instance.inventoryShowing = !InventoryManager.instance.inventoryShowing;
+                GameEvents.ReportOnInventoryChange(InventoryManager.instance.inventoryShowing);
             }
         }
         #endregion
@@ -288,10 +286,7 @@ namespace Manager.Player
                 }
             }
         }
-        public void OnConversationStart(Transform actor)
-        {
-            
-        }
+        
         #endregion
     }
     #endregion
