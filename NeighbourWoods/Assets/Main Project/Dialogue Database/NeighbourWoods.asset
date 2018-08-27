@@ -163,19 +163,23 @@ MonoBehaviour:
     - title: Entry 1 State
       value: active
       type: 0
-      typeString: 
+      typeString: CustomFieldType_QuestState
     - title: Entry 1
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: Entry 2 State
       value: unassigned
       type: 0
-      typeString: 
+      typeString: CustomFieldType_QuestState
     - title: Entry 2
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
+    - title: 
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
   - id: 2
     fields:
     - title: Name
@@ -1553,7 +1557,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(UpdateTime,,GameManager);
         type: 0
         typeString: 
       conversationID: 4
@@ -1573,7 +1577,7 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 188
+        x: 191
         y: 138
         width: 160
         height: 30

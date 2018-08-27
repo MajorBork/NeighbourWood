@@ -109,6 +109,46 @@ namespace Manager.Level
             }
             GameEvents.ReportOnTimeChange(timeSlot,day);
         }
+        public void UpdateTimeToMorning()
+        {
+            if ((int)timeSlot == 1)
+            {
+                return;
+            }
+            if ((int)timeSlot == 2)
+            {
+                timeSlot -= 1;
+            }
+            if ((int)timeSlot == 3)
+            {
+                timeSlot -= 2;
+            }
+            if ((int)timeSlot == 4)
+            {
+                timeSlot -= 3;
+            }
+            GameEvents.ReportOnTimeChange(timeSlot, day);
+        }
+        public void UpdateTimeToAfternoon()
+        {
+            if ((int)timeSlot == 1)
+            {
+                timeSlot += 2;
+            }
+            if ((int)timeSlot == 2)
+            {
+                timeSlot += 1;
+            }
+            if ((int)timeSlot == 3)
+            {
+                return;
+            }
+            if ((int)timeSlot == 4)
+            {
+                timeSlot -= 2;
+            }
+            GameEvents.ReportOnTimeChange(timeSlot, day);
+        }
     }
     #endregion
     #region Levels Class

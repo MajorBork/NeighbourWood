@@ -23,6 +23,7 @@ namespace Manager.GameDialogue
         public DialogueActor TestCharacter3;
         public EnvironmentManager environmentManager;
         public int food;
+        //public Conversation conversation;
         public int taskPoints;
         public int conversationID;
         public int dialogueEntryID;
@@ -63,19 +64,6 @@ namespace Manager.GameDialogue
                 gameState = GameState.FREE_ROAM;
             }
             GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
-        }
-        public void GetCurrentDialogueConversation()
-        {
-            int dayModifierDialgoue = DialogueManager.lastConversationID;
-            int dayModifier = DialogueManager.currentConversationState.pcResponses.GetLength(4);
-            if (dayModifierDialgoue == 4)
-            {
-                Debug.Log(dayModifierDialgoue);
-                if (dayModifier == 4)
-                {
-                    Debug.Log(dayModifier);
-                }
-            }
         }
     }
     #region DialogueList Class

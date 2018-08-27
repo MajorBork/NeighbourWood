@@ -368,12 +368,6 @@ Transform:
   m_Father: {fileID: 1646615462}
   m_RootOrder: 89
   m_LocalEulerAnglesHint: {x: 0, y: 31.371002, z: 0}
---- !u!114 &46262554 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114586278785658034, guid: 3da36d276179b404caa3fd39685c11a3,
-    type: 2}
-  m_PrefabInternal: {fileID: 872359518}
-  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
 --- !u!1 &46832385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,9 +1917,9 @@ CanvasGroup:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 292272088}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!4 &295884835 stripped
 Transform:
@@ -1969,7 +1963,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &324027635
@@ -5459,12 +5453,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 715960352}
---- !u!114 &730793229 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114789938340454570, guid: caa9747212a8dd84098e9315617c48c6,
-    type: 2}
-  m_PrefabInternal: {fileID: 470809078}
-  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
 --- !u!1 &751713170
 GameObject:
   m_ObjectHideFlags: 0
@@ -7052,12 +7040,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3da36d276179b404caa3fd39685c11a3, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &886643502 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114586278785658034, guid: 3da36d276179b404caa3fd39685c11a3,
-    type: 2}
-  m_PrefabInternal: {fileID: 968407826}
-  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
 --- !u!4 &888695588 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4348929719211830, guid: caa9747212a8dd84098e9315617c48c6,
@@ -7825,7 +7807,7 @@ Prefab:
     - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
         type: 2}
       propertyPath: conversationEvents.onConversationEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
         type: 2}
@@ -8017,16 +7999,16 @@ Prefab:
         type: 2}
       propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1101306671}
+      objectReference: {fileID: 1918485834}
     - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
         type: 2}
       propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartDialogue
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
         type: 2}
       propertyPath: conversationEvents.onConversationStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114689266081349968, guid: 3da36d276179b404caa3fd39685c11a3,
         type: 2}
@@ -9225,8 +9207,9 @@ GameObject:
   - component: {fileID: 1101306665}
   - component: {fileID: 1101306664}
   - component: {fileID: 1101306666}
-  - component: {fileID: 1101306668}
   - component: {fileID: 1101306673}
+  - component: {fileID: 1101306670}
+  - component: {fileID: 1101306668}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -9280,6 +9263,7 @@ MonoBehaviour:
   middayLightColour: {r: 1, g: 0.7708238, b: 0.6084906, a: 1}
   afternoonLightColour: {r: 1, g: 0.4009289, b: 0.19339621, a: 1}
   eveningLightColour: {r: 0, g: 0, b: 0, a: 0}
+  morningSkyBox: {fileID: 0}
 --- !u!114 &1101306667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9300,20 +9284,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1101306663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac1e11ce8ba8d704fbb860efeff2dd8e, type: 3}
+  m_Script: {fileID: 11500000, guid: 423bbdd97caf0b544b6232ddab7b0359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Lua: {fileID: 0}
   neighbourWoodsDatabase: {fileID: 11400000, guid: ca860202aefd0a94a852e5a32140e6b0,
     type: 2}
-  playerActor: {fileID: 730793229}
-  TestCharacter: {fileID: 2088376298}
-  TestCharacter2: {fileID: 46262554}
-  TestCharacter3: {fileID: 886643502}
-  environmentManager: {fileID: 1101306666}
-  food: Food
-  conversationID: 4
-  dialogueEntryID: 4
+  playerActor: {fileID: 0}
+  TestCharacter: {fileID: 0}
+  TestCharacter2: {fileID: 0}
+  TestCharacter3: {fileID: 0}
+  environmentManager: {fileID: 0}
+  food: 0
+  taskPoints: 0
+  conversationID: 0
+  dialogueEntryID: 0
   gameState: 0
 --- !u!114 &1101306669
 MonoBehaviour:
@@ -9327,6 +9312,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: 0
+--- !u!114 &1101306670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1101306663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8265b2019037c747a45868d0273d3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iteminInventory:
+    itemName: 0
+    itemType: 0
+    itemIcon: {fileID: 0}
+    itemObject: {fileID: 0}
+  gameManagerUI: {fileID: 1918485835}
+  inventoryShowing: 0
 --- !u!114 &1101306671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17729,7 +17732,7 @@ MonoBehaviour:
   dialogueBoxCanvas: {fileID: 2022822872}
   buttonPressBox: {fileID: 1185327679}
   fadeCanvas: {fileID: 2053723056}
-  inventoryCanvas: {fileID: 0}
+  inventoryCanvas: {fileID: 292272092}
   dayText: {fileID: 1182032178}
   timeText: {fileID: 1852224073}
   taskPoints: 0
@@ -19217,12 +19220,6 @@ Transform:
   m_Father: {fileID: 1646615462}
   m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2088376298 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114586278785658034, guid: 3da36d276179b404caa3fd39685c11a3,
-    type: 2}
-  m_PrefabInternal: {fileID: 1576266617}
-  m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
 --- !u!1 &2090717151
 GameObject:
   m_ObjectHideFlags: 0
