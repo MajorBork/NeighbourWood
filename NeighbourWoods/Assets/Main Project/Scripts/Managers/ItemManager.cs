@@ -57,7 +57,7 @@ namespace Manager.Item
     #region ItemManager Class
     public class ItemManager : Singleton<ItemManager>
     {
-        public Items[] item;
+        //public Items[] item;
     }
     #endregion
     #region Items Class

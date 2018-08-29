@@ -77,7 +77,7 @@ namespace Manager.Level
     public class LevelManager : Singleton<LevelManager>
     {
         #region Variables
-        public Levels[] levels;
+        //public Levels[] levels;
         public Day day;
         public TimeSlot timeSlot;
         public int currentTime;
@@ -104,26 +104,25 @@ namespace Manager.Level
                 if ((int)day == 7)
                 {
                     //make gameevent reportgameover 
-                    //DialogueDatabase.Contains()
                 }
             }
             GameEvents.ReportOnTimeChange(timeSlot,day);
         }
         public void UpdateTimeToMorning()
         {
-            if ((int)timeSlot == 1)
+            if (timeSlot == TimeSlot.MORNING)
             {
                 return;
             }
-            if ((int)timeSlot == 2)
+            if (timeSlot == TimeSlot.MIDDAY)
             {
-                timeSlot -= 1;
+                timeSlot = TimeSlot.MORNING;
             }
-            if ((int)timeSlot == 3)
+            if (timeSlot == TimeSlot.MORNING)
             {
                 timeSlot -= 2;
             }
-            if ((int)timeSlot == 4)
+            if (timeSlot == TimeSlot.MORNING)
             {
                 timeSlot -= 3;
             }
@@ -131,19 +130,19 @@ namespace Manager.Level
         }
         public void UpdateTimeToAfternoon()
         {
-            if ((int)timeSlot == 1)
+            if (timeSlot == TimeSlot.MORNING)
             {
                 timeSlot += 2;
             }
-            if ((int)timeSlot == 2)
+            if (timeSlot == TimeSlot.MORNING)
             {
                 timeSlot += 1;
             }
-            if ((int)timeSlot == 3)
+            if (timeSlot == TimeSlot.MORNING)
             {
                 return;
             }
-            if ((int)timeSlot == 4)
+            if (timeSlot == TimeSlot.MORNING)
             {
                 timeSlot -= 2;
             }

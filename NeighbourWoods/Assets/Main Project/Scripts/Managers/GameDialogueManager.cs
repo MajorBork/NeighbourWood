@@ -15,46 +15,32 @@ namespace Manager.GameDialogue
     public class GameDialogueManager : MonoBehaviour
     {
         #region Variables
-        public LuaNetworkCommands Lua;
-        public DialogueDatabase neighbourWoodsDatabase;
-        public DialogueActor playerActor;
-        public DialogueActor TestCharacter;
-        public DialogueActor TestCharacter2;
-        public DialogueActor TestCharacter3;
         public EnvironmentManager environmentManager;
+        public GameManager gameManager;
         public int food;
-        //public Conversation conversation;
         public int taskPoints;
-        public int conversationID;
-        public int dialogueEntryID;
         public GameState gameState;
         #endregion
         #region Start and Update Methods
         void Start() // Use this for initialization
         {
-            //IfActorSpoke();
+
         }
         void Update() // Use this for initialization
         {
-            GetConversation();
+
         }
         #endregion
-        void GetConversation()
-        {
-            taskPoints = DialogueLua.GetVariable("TaskPoints").asInt;
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                Debug.Log(taskPoints);
-            }
-        }
+        #region Start and EndDialogue Methods
         public void StartDialogue()
         {
             Debug.Log("Start of converstion.");
             if (gameState == GameState.FREE_ROAM)
             {
                 gameState = GameState.DIALOGUE;
+                Debug.Log(gameState);
             }
-            GameEvents.ReportGameStateChange(GameState.DIALOGUE);
+            GameEvents.ReportGameStateChange(gameState);
         }
         public void EndDialogue()
         {
@@ -62,9 +48,32 @@ namespace Manager.GameDialogue
             if (gameState == GameState.DIALOGUE)
             {
                 gameState = GameState.FREE_ROAM;
+                Debug.Log(gameState);
             }
-            GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
+            GameEvents.ReportGameStateChange(gameState);
         }
+        //void OnEnable() //Subscribes to our game events
+        //{
+        //    GameEvents.OnGameStateChange += OnGameStateChange;
+        //}
+        //void OnDisable() //Unsubscribes to our game events
+        //{
+        //    GameEvents.OnGameStateChange -= OnGameStateChange;
+        //}
+        //public void OnGameStateChange(GameState gameState)
+        //{
+        //    if (gameState == GameState.FREE_ROAM)
+        //    {
+        //        gameState = GameState.DIALOGUE;
+        //        GameEvents.ReportGameStateChange(GameState.DIALOGUE);
+        //    }
+        //    if (gameState == GameState.DIALOGUE)
+        //    {
+        //        gameState = GameState.FREE_ROAM;
+        //        GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
+        //    }
+        //}
+        #endregion
     }
     #region DialogueList Class
     [Groups("Base Settings")]

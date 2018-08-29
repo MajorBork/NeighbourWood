@@ -31,10 +31,19 @@ public class OldCodeManager
     //public TMP_Text playerDialogueText;
     //private Queue<string> sentences;
     //public List<string> sent;
+    //public LuaNetworkCommands Lua;
+    //public DialogueDatabase neighbourWoodsDatabase;
+    //public DialogueActor playerActor;
+    //public DialogueActor TestCharacter;
+    //public DialogueActor TestCharacter2;
+    //public DialogueActor TestCharacter3;
+    //public Conversation conversation;
+    //public int conversationID;
+    //public int dialogueEntryID;
     //void Start()
     //{
-        //sentences = new Queue<string>();
-        //sent = new List<string>();
+    //sentences = new Queue<string>();
+    //sent = new List<string>();
     //}
     //void Update()
     //{
@@ -115,6 +124,35 @@ public class OldCodeManager
     //        gameState = GameState.FREE_ROAM;
     //    }
     //    GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
+    //}
+    //void GetConversation()
+    //{
+    //    taskPoints = DialogueLua.GetVariable("TaskPoints").asInt;
+    //    if (Input.GetKeyDown(KeyCode.Q))
+    //    {
+    //        Debug.Log(taskPoints);
+    //    }
+    //}
+    //public void OnGameStateChange(GameState gameState)
+    //{
+    //    if (gameState == GameState.DIALOGUE)
+    //    {
+    //        gameState = GameState.DIALOGUE;
+    //        GameEvents.ReportGameStateChange(GameState.DIALOGUE);
+    //    }
+    //    else
+    //    {
+    //        gameState = GameState.FREE_ROAM;
+    //        GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
+    //    }
+    //}
+    //void OnEnable() //Subscribes to our game events
+    //{
+    //    GameEvents.OnGameStateChange += OnGameStateChange;
+    //}
+    //void OnDisable() //Unsubscribes to our game events
+    //{
+    //    GameEvents.OnGameStateChange -= OnGameStateChange;
     //}
 }
 //public class DialogueCollider : MonoBehaviour

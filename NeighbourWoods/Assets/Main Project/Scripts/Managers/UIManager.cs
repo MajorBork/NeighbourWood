@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using Manager.Level;
 using Manager.Inventory;
+using Manager;
 using DG.Tweening;
 using Language.Lua;
 using PixelCrushers.DialogueSystem;
@@ -16,11 +17,12 @@ namespace Manager.UI
     {
         #region Variables
         public CanvasGroup dialogueBoxCanvas;
-        public CanvasGroup buttonPressBox;
+        //public CanvasGroup buttonPressBox;
         public CanvasGroup fadeCanvas;
         public CanvasGroup inventoryCanvas;
         public TextMeshProUGUI dayText;
         public TextMeshProUGUI timeText;
+        public GameState gameState;
         public int taskPoints;
         public int newTaskPoints;
         public float fadeInTime = 1;
@@ -29,11 +31,11 @@ namespace Manager.UI
         void Start() // Use this for initialization
         {
             dialogueBoxCanvas.alpha = 0;
-            buttonPressBox.alpha = 0;
+            //buttonPressBox.alpha = 0;
             fadeCanvas.alpha = 0;
             timeText.text = "";
             dayText.text = "";
-            taskPoints = DialogueLua.GetVariable("TaskPoints").asInt;
+            taskPoints = 0;
         }
         void Update() // Update is called once per frame
         {

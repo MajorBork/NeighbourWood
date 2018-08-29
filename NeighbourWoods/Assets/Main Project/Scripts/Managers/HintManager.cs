@@ -9,7 +9,7 @@ namespace Manager.Hint
     #region HintManager Class
     public class HintManager : Singleton<HintManager>
     {
-        public Hints[] hints;
+        //public Hints[] hints;
         void Start() // Use this for initialization
         {
 

@@ -21,7 +21,7 @@ namespace Manager.Audio
     #region AudioManager Class
     public class AudioManager : Singleton<AudioManager>
     {
-        AudioFiles[] audioFiles;
+        //AudioFiles[] audioFiles;
         public float volume;
         public static bool mute;
         void OnEnable()  //Subscribes to our game events

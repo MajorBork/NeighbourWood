@@ -41,14 +41,6 @@ namespace Manager
             }
         }
         
-        //void OnEnable() //Subscribes to our game events
-        //{
-        //    GameEvents.OnGameStateChange += OnGameStateChange;
-        //}
-        //void OnDisable() //Unsubscribes to our game events
-        //{
-        //    GameEvents.OnGameStateChange -= OnGameStateChange;
-        //}
     }
     #endregion
 }

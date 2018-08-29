@@ -8,7 +8,7 @@ namespace Manager.Cosmetics
     #region CosmeticsManager Class
     public class CosmeticsManager : Singleton<CosmeticsManager>
     {
-        public Cosmetics[] cosmeticList;
+        //public Cosmetics[] cosmeticList;
         // Use this for initialization
         void Start()
         {

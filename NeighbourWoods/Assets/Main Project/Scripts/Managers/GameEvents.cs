@@ -29,7 +29,7 @@ public static class GameEvents
     }
     public static void ReportGameStateChange(GameState gamestate)
     {
-        //Debug.Log (">>> EVENT: ReportOnDialogueChange((" + game +")");
+        Debug.Log ("Changed State" + gamestate);
         if (OnGameStateChange != null)
         {
             OnGameStateChange(gamestate);

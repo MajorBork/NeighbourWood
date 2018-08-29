@@ -5,6 +5,7 @@ using UnityEngine.PostProcessing;
 using UnityEngine.UI;
 using Manager.UI;
 using Manager.Inventory;
+using Manager;
 using TMPro;
 using DG.Tweening;
 using PixelCrushers.DialogueSystem;
@@ -23,11 +24,13 @@ namespace Manager.Player
     {
         #region Variables
         public Vision vision;
+        public GameState gameState;
         public TMP_Text testTMP;
         #region Object Variables
         // All of the Variables that link to objects or components
         public GameObject player;
         public UIManager gameManagerUI;
+        public GameManager gameManager;
         public GameObject playerCamera;
         public Transform playerCameraTransform;
         public PostProcessingBehaviour smellOVision;
@@ -77,6 +80,7 @@ namespace Manager.Player
             playerCameraTransform = Camera.main.transform;
             smellOVision = GetComponentInChildren<PostProcessingBehaviour>();
             vision = Vision.NORMAL;
+            gameState = GameState.FREE_ROAM;
             characterController = GetComponent<CharacterController>();
             if (lockCursor)
             {
@@ -89,10 +93,10 @@ namespace Manager.Player
             Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             Vector2 inputDir = input.normalized;
             bool running = Input.GetButton("Sprint"); // Sprinting in Game
-            switch (GameManager.instance.gameState)
+            switch (gameState)
             {
                 case GameState.FREE_ROAM: // if the GameState enum is in FreeRoam then all of the movement and button controls updates
-                    MovementController(inputDir,running);
+                    MovementController(inputDir, running);
                     VisionController();
                     CameraController();
                     BarkController();
@@ -286,7 +290,6 @@ namespace Manager.Player
                 }
             }
         }
-        
         #endregion
     }
     #endregion
