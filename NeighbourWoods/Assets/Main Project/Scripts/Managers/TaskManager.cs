@@ -3,48 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using EasyEditor;
 using Manager.Level;
+using Manager.Environment;
+using Manager.UI;
 
 namespace Manager.Task
 {
-    #region TaskName Enum
-    public enum TaskName
-    {
-        FIND_PUUPIES,
-        GIVE_TURTLES_PIZZA,
-        CHASE_OFF_FOX,
-        SECURE_CHICKEN_COOP,
-        DEAL_WITH_FOX,
-        MEDIATE_BETWEEN_FOX_AND_CHICKENS,
-        HELP_SQUIRREL,
-        CONVENIENCE_STORE_HEIST,
-        DEAL_WITH_DEER,
-        MEET_UNICORN,
-        FAWN_RESCUE,
-        WITCH_HOUSE_VISIT,
-        FIND_SOCKS_FOR_ARCHIE
-    }
-    #endregion
-    #region Tasktype Enum
-    public enum Taskstype
-    {
-        Dialogue,
-        Fetch,
-        Puzzle,
-        // other
-    }
-    #endregion
     #region TasManager Class
     public class TaskManager : Singleton<TaskManager>
     {
-        public Tasks[] tasks;
+        //public Tasks[] tasks;
+        public LevelManager levelManager;
+        public UIManager uiManager;
+        public int taskPoints;
+        public int maxTaskPoints;
         #region TaskStarted() TaskCompleted()
-        public void TaskStarted(Tasks tasks) // name and value in the Parameters
+        public int AddTaskPoints(int taskPointsAdd)
         {
-            //Sends started task to eventmanager 
+            taskPointsAdd += taskPoints;
+            Debug.Log(taskPoints);
+            return taskPoints;
         }
-        public void TaskCompleted(Tasks tasks) // name and value in the Parameters
+        public void IfTaskPointsFull()
         {
-            //Sends completed task to eventmanager
+            if (taskPoints == maxTaskPoints)
+            {
+                levelManager.UpdateTime();
+                //uiManager.
+            }
         }
         #endregion
     }
@@ -54,14 +39,12 @@ namespace Manager.Task
     [System.Serializable]
     public class Tasks
     {
-        #region Array Variables
-        public TaskName taskName;
+        //public TaskName taskName;
         public bool taskStarted;
         public bool taskCompleted;
-        public Taskstype tasksType;
+        //public Taskstype tasksType;
         public Day day;
         public TimeSlot timeSlot;
-        #endregion
     }
     #endregion
 }

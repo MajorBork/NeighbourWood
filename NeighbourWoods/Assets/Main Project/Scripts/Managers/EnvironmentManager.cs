@@ -13,6 +13,7 @@ namespace Manager.Environment
         #region Variables
         public Day day;
         public TimeSlot timeSlot;
+        public Level.LevelManager levelManager;
         public Light sceneLight;
         public Color morningLightColour;
         public Color middayLightColour;
@@ -45,7 +46,7 @@ namespace Manager.Environment
         IEnumerator ChangeTime ()
         {
             yield return new WaitForSeconds (2);
-            switch (Level.LevelManager.instance.timeSlot)
+            switch (levelManager.timeSlot)
             {
                 case TimeSlot.MORNING: // if the GameState enum is in FreeRoam then all of the movement and button controls updates
                     sceneLight.color = morningLightColour;

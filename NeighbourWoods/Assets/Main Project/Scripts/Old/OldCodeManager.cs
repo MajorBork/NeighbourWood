@@ -14,8 +14,31 @@
 //}
 //public enum DialoguePorCHolder
 //{
-//Player,
-//Character,
+//    Player,
+//    Character,
+//}
+//public enum TaskName
+//{
+//    FIND_PUUPIES,
+//    GIVE_TURTLES_PIZZA,
+//    CHASE_OFF_FOX,
+//    SECURE_CHICKEN_COOP,
+//    DEAL_WITH_FOX,
+//    MEDIATE_BETWEEN_FOX_AND_CHICKENS,
+//    HELP_SQUIRREL,
+//    CONVENIENCE_STORE_HEIST,
+//    DEAL_WITH_DEER,
+//    MEET_UNICORN,
+//    FAWN_RESCUE,
+//    WITCH_HOUSE_VISIT,
+//    FIND_SOCKS_FOR_ARCHIE
+//}
+//public enum Taskstype
+//{
+//    Dialogue,
+//    Fetch,
+//    Puzzle,
+//    // other
 //}
 public class OldCodeManager
 {
@@ -153,6 +176,14 @@ public class OldCodeManager
     //void OnDisable() //Unsubscribes to our game events
     //{
     //    GameEvents.OnGameStateChange -= OnGameStateChange;
+    //}
+    //public void TaskStarted(Tasks tasks) // name and value in the Parameters
+    //{
+    //    //Sends started task to eventmanager 
+    //}
+    //public void TaskCompleted(Tasks tasks) // name and value in the Parameters
+    //{
+    //    //Sends completed task to eventmanager
     //}
 }
 //public class DialogueCollider : MonoBehaviour

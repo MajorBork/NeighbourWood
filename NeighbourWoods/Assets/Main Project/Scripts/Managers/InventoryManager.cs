@@ -35,17 +35,17 @@ namespace Manager.Inventory
             
         }
         #region Food Methods
-        void AddFood(int food)
+        public void AddFood(int food)
         {
             food++;
 
         }
-        void MinusFood(int food)
+        public void MinusFood(int food)
         {
             food--;
         }
         #endregion
-        void PickupItem(GameObject itemObject)
+        public void PickupItem(GameObject itemObject)
         {
 
         }

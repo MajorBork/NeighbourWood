@@ -52,27 +52,6 @@ namespace Manager.GameDialogue
             }
             GameEvents.ReportGameStateChange(gameState);
         }
-        //void OnEnable() //Subscribes to our game events
-        //{
-        //    GameEvents.OnGameStateChange += OnGameStateChange;
-        //}
-        //void OnDisable() //Unsubscribes to our game events
-        //{
-        //    GameEvents.OnGameStateChange -= OnGameStateChange;
-        //}
-        //public void OnGameStateChange(GameState gameState)
-        //{
-        //    if (gameState == GameState.FREE_ROAM)
-        //    {
-        //        gameState = GameState.DIALOGUE;
-        //        GameEvents.ReportGameStateChange(GameState.DIALOGUE);
-        //    }
-        //    if (gameState == GameState.DIALOGUE)
-        //    {
-        //        gameState = GameState.FREE_ROAM;
-        //        GameEvents.ReportGameStateChange(GameState.FREE_ROAM);
-        //    }
-        //}
         #endregion
     }
     #region DialogueList Class
