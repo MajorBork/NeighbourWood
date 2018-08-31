@@ -4,19 +4,27 @@ using UnityEngine;
 using Manager.Item;
 using Manager.UI;
 using DG.Tweening;
+using TMPro;
 
 namespace Manager.Inventory 
 {
+    #region InventoryVis Enum
     public enum InventoryVis
     {
         IS_LOOKING_IN_INVENTORY,
         NOT_LOOKING_IN_INVENTORY,
     }
+    #endregion
+    #region InventoryManager Class
     public class InventoryManager : Singleton<InventoryManager>
     {
         public Items iteminInventory;
+        public TextMeshProUGUI FoodText;
         public UIManager gameManagerUI;
+        public GameObject itemObject;
         public bool inventoryShowing;
+        public bool hasItem;
+        public int food;
         void Start() // Use this for initialization
         {
             inventoryShowing = false;
@@ -26,6 +34,22 @@ namespace Manager.Inventory
         {
             
         }
+        #region Food Methods
+        void AddFood(int food)
+        {
+            food++;
+
+        }
+        void MinusFood(int food)
+        {
+            food--;
+        }
+        #endregion
+        void PickupItem(GameObject itemObject)
+        {
+
+        }
+        #region Inventory Event Methods
         void OnEnable()
         {
             GameEvents.OnInventoryVisChange += OnShowInventoryChange;
@@ -49,5 +73,7 @@ namespace Manager.Inventory
                 gameManagerUI.inventoryCanvas.blocksRaycasts = false;
             }
         }
+        #endregion
     }
+    #endregion
 }

@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dddab24af7a02a54c9631fd5c532d7c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputDevice: 0
+  inputDevice: 2
   joystickKeyCodesToCheck: 4a0100004b0100004c01000051010000
   joystickButtonsToCheck: []
   joystickAxesToCheck: []
@@ -153,7 +153,7 @@ MonoBehaviour:
       showNPCSubtitlesWithResponses: 1
       showPCSubtitlesDuringLine: 1
       allowPCSubtitleReminders: 1
-      skipPCSubtitleAfterResponseMenu: 1
+      skipPCSubtitleAfterResponseMenu: 0
       subtitleCharsPerSecond: 30
       minSubtitleSeconds: 2
       continueButton: 0

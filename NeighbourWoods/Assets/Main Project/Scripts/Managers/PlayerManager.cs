@@ -257,7 +257,7 @@ namespace Manager.Player
 
         }
         #endregion
-        #region Event Methods
+        #region Vision Event Methods
         void OnEnable() //Subscribes to our game events
         {
             GameEvents.OnVisionChange += OnVisionChange;
