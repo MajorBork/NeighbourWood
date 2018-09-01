@@ -55,11 +55,11 @@ namespace Manager.GameDialogue
         #endregion
     }
     #region DialogueList Class
-    [Groups("Base Settings")]
-    [System.Serializable]
-    public class DialogueList
-    {
+    //[Groups("Base Settings")]
+    //[System.Serializable]
+    //public class DialogueList
+    //{
 
-    }
+    //}
     #endregion
 }

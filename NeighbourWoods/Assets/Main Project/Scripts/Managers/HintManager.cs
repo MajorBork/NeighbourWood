@@ -21,14 +21,14 @@ namespace Manager.Hint
     }
     #endregion
     #region Hints Class
-    [Groups("Base Settings")]
-    [System.Serializable]
-    public class Hints
-    {
-        public Characters characters;
-        public int Hintnum;
-        [TextArea(3, 10)]
-        public string Text;
-    }
+    //[Groups("Base Settings")]
+    //[System.Serializable]
+    //public class Hints
+    //{
+    //    public Characters characters;
+    //    public int Hintnum;
+    //    [TextArea(3, 10)]
+    //    public string Text;
+    //}
     #endregion
 }

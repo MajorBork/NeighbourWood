@@ -25,7 +25,7 @@ namespace Manager.Player
         #region Variables
         public Vision vision;
         public GameState gameState;
-        public TMP_Text testTMP;
+        //public TMP_Text testTMP;
         #region Object Variables
         // All of the Variables that link to objects or components
         public GameObject player;

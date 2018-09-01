@@ -20,7 +20,9 @@ namespace Manager.Environment
         public Color afternoonLightColour;
         public Color eveningLightColour;
         public Material morningSkyBox;
-
+        public Material middaySkyBox;
+        public Material afternoonSkyBox;
+        public Material eveningSkyBox;
         #endregion
         void Start()// Use this for initialization
         {
@@ -54,26 +56,27 @@ namespace Manager.Environment
                     break;
                 case TimeSlot.MIDDAY:
                     sceneLight.color = middayLightColour;
-                    RenderSettings.skybox = morningSkyBox;
+                    RenderSettings.skybox = middaySkyBox;
                     break;
                 case TimeSlot.AFTERNOON:
                     sceneLight.color = afternoonLightColour;
-                    RenderSettings.skybox = morningSkyBox;
+                    RenderSettings.skybox = afternoonSkyBox;
                     break;
                 case TimeSlot.EVENING:
                     sceneLight.color = eveningLightColour;
-                    RenderSettings.skybox = morningSkyBox;
+                    RenderSettings.skybox = eveningSkyBox;
                     break;
                 default: break;
             }
         }
         #endregion
-
     }
-    [Groups("Base Settings")]
-    [System.Serializable]
-    public class Environments
-    {
+    #region Environment Class
+    //[Groups("Base Settings")]
+    //[System.Serializable]
+    //public class Environments
+    //{
 
-    }
+    //}
+    #endregion
 }

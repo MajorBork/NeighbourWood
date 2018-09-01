@@ -61,14 +61,14 @@ namespace Manager.Item
     }
     #endregion
     #region Items Class
-    [Groups("Base Settings")]
-    [System.Serializable]
-    public class Items
-    {
-        public ItemID itemName;
-        public ItemType itemType;
-        public Image itemIcon;
-        public GameObject itemObject;
-    }
+    //[Groups("Base Settings")]
+    //[System.Serializable]
+    //public class Items
+    //{
+    //    public ItemID itemName;
+    //    public ItemType itemType;
+    //    public Image itemIcon;
+    //    public GameObject itemObject;
+    //}
     #endregion 
 }

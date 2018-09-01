@@ -35,16 +35,16 @@ namespace Manager.Task
     }
     #endregion
     #region Task Class
-    [Groups("Base Settings")]
-    [System.Serializable]
-    public class Tasks
-    {
-        //public TaskName taskName;
-        public bool taskStarted;
-        public bool taskCompleted;
-        //public Taskstype tasksType;
-        public Day day;
-        public TimeSlot timeSlot;
-    }
+    //[Groups("Base Settings")]
+    //[System.Serializable]
+    //public class Tasks
+    //{
+    //    public TaskName taskName;
+    //    public bool taskStarted;
+    //    public bool taskCompleted;
+    //    public Taskstype tasksType;
+    //    public Day day;
+    //    public TimeSlot timeSlot;
+    //}
     #endregion
 }

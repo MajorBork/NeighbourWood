@@ -22,9 +22,13 @@ namespace Manager.UI
         public CanvasGroup inventoryCanvas;
         public TextMeshProUGUI dayText;
         public TextMeshProUGUI timeText;
+        public TextMeshProUGUI tmpFoodText;
+        //public TextMeshProUGUI 
+        public Image itemSpriteUI;
         public GameState gameState;
         public int taskPoints;
         public int newTaskPoints;
+        public int textFood;
         public float fadeInTime = 1;
         #endregion
         #region Start and Update
@@ -44,13 +48,19 @@ namespace Manager.UI
         }
         #endregion
         #region Methods
-        void UpdateItem()
+        public void PickupItem(GameObject itemObjectUI)
+        {
+            
+        }
+        public void UpdateItemIcon(Image itemIcon)
         {
             // replaces inventoryVis icon 
+            itemIcon = itemSpriteUI;
         }
-        void AssigningItems()
+        void UpdateFoodText(int food)
         {
-            // assigns a icon and a scene object to each item
+            food = textFood;
+            tmpFoodText.text = ("Food: " + textFood);
         }
         void UpdateCharacterIcon()
         {

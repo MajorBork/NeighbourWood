@@ -2,9 +2,9 @@
 using EasyEditor;
 using Manager.Item;
 
-[Groups("Base Settings")]
-[CustomEditor(typeof(ItemManager))]
-public class ItemManagerEditor : EasyEditorBase
-{
+//[Groups("Base Settings")]
+//[CustomEditor(typeof(ItemManager))]
+//public class ItemManagerEditor : EasyEditorBase
+//{
 
-}
+//}

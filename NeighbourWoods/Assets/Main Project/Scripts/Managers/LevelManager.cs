@@ -114,6 +114,10 @@ namespace Manager.Level
             }
             GameEvents.ReportOnTimeChange(timeSlot,day);
         }
+        public void MorningTime()// to change into turning off visual components because characters need to be updated when not visualable but for prototype it will do
+        {
+
+        }
         #region Utility Time Methods
         public void UpdateTimeToMorning()
         {
@@ -165,11 +169,6 @@ namespace Manager.Level
         }
         #endregion
         #endregion
-
-        public void MorningTime()// to change into turning off visual components because characters need to be updated when not visualable but for prototype it will do
-        {
-     
-        }
         void OnEnable() //Subscribes to our game events
         {
             GameEvents.OnTimeChange += OnTimeChange;
@@ -199,7 +198,7 @@ namespace Manager.Level
                     eveningObject.SetActive(false);
                 }
             }
-            if (timeSlot == TimeSlot.MORNING)
+            if (timeSlot == TimeSlot.MIDDAY)
             {
                 foreach (GameObject morningObject in morningObjects)
                 {
@@ -218,11 +217,11 @@ namespace Manager.Level
                     eveningObject.SetActive(false);
                 }
             }
-            if (timeSlot == TimeSlot.MORNING)
+            if (timeSlot == TimeSlot.AFTERNOON)
             {
                 foreach (GameObject morningObject in morningObjects)
                 {
-                    morningObject.SetActive(true); // to change into turning off visual components because characters need to be updated when not visualable but for prototype it will do
+                    morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable but for prototype it will do
                 }
                 foreach (GameObject middayObject in middayObjects)
                 {
@@ -230,18 +229,18 @@ namespace Manager.Level
                 }
                 foreach (GameObject afternoonObject in afternoonObjects)
                 {
-                    afternoonObject.SetActive(false);
+                    afternoonObject.SetActive(true);
                 }
                 foreach (GameObject eveningObject in eveningObjects)
                 {
                     eveningObject.SetActive(false);
                 }
             }
-            if (timeSlot == TimeSlot.MORNING)
+            if (timeSlot == TimeSlot.EVENING)
             {
                 foreach (GameObject morningObject in morningObjects)
                 {
-                    morningObject.SetActive(true); // to change into turning off visual components because characters need to be updated when not visualable but for prototype it will do
+                    morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable but for prototype it will do
                 }
                 foreach (GameObject middayObject in middayObjects)
                 {
@@ -253,20 +252,20 @@ namespace Manager.Level
                 }
                 foreach (GameObject eveningObject in eveningObjects)
                 {
-                    eveningObject.SetActive(false);
+                    eveningObject.SetActive(true);
                 }
             }
         }
     }
     #endregion
     #region Levels Class
-    [Groups("Base Settings")]
-    [System.Serializable]
-    public class Levels
-    {
-        public LocationID locationID; 
-        public BoxCollider areaCollider;
-        public Tasks tasksInArea;
-    }
+    //[Groups("Base Settings")]
+    //[System.Serializable]
+    //public class Levels
+    //{
+    //    public LocationID locationID; 
+    //    public BoxCollider areaCollider;
+    //    public Tasks tasksInArea;
+    //}
     #endregion
 }

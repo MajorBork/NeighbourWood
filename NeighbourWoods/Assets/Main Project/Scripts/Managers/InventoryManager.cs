@@ -18,12 +18,12 @@ namespace Manager.Inventory
     #region InventoryManager Class
     public class InventoryManager : Singleton<InventoryManager>
     {
-        public Items iteminInventory;
-        public TextMeshProUGUI FoodText;
+        //public Items iteminInventory;
         public UIManager gameManagerUI;
         public GameObject itemObject;
         public bool inventoryShowing;
         public bool hasItem;
+        public string uiManagerMethod = "UpdateFoodText";
         public int food;
         void Start() // Use this for initialization
         {
@@ -38,17 +38,14 @@ namespace Manager.Inventory
         public void AddFood(int food)
         {
             food++;
-
+            SendMessage(uiManagerMethod,food);
         }
         public void MinusFood(int food)
         {
             food--;
+            SendMessage(uiManagerMethod, food);
         }
         #endregion
-        public void PickupItem(GameObject itemObject)
-        {
-
-        }
         #region Inventory Event Methods
         void OnEnable()
         {
