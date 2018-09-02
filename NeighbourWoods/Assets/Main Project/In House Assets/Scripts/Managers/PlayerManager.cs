@@ -20,7 +20,7 @@ namespace Manager.Player
     }
     #endregion
     #region PlayerManager Class
-    public class PlayerManager : Singleton<PlayerManager> // An script that will not be destroyed when going new levels (if we need to load new levels)
+    public class PlayerManager : MonoBehaviour //Singleton<PlayerManager> // An script that will not be destroyed when going new levels (if we need to load new levels)
     {
         #region Variables
         public Vision vision;
@@ -88,7 +88,7 @@ namespace Manager.Player
                 Cursor.visible = false;
             }
         }
-        void Update() // Update is called once per frame
+        public void Update() // Update is called once per frame
         {
             Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
             Vector2 inputDir = input.normalized;

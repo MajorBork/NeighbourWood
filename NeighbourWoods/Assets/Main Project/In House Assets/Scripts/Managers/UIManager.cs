@@ -24,7 +24,8 @@ namespace Manager.UI
         public TextMeshProUGUI timeText;
         public TextMeshProUGUI tmpFoodText;
         //public TextMeshProUGUI 
-        public Image itemSpriteUI;
+        public Image itemImageUI;
+        public Image nothingItemImageUI;
         public GameState gameState;
         public int taskPoints;
         public int newTaskPoints;
@@ -48,14 +49,17 @@ namespace Manager.UI
         }
         #endregion
         #region Methods
-        public void PickupItem(GameObject itemObjectUI)
-        {
-            
-        }
         public void UpdateItemIcon(Image itemIcon)
         {
             // replaces inventoryVis icon 
-            itemIcon = itemSpriteUI;
+            itemIcon = itemImageUI;
+            nothingItemImageUI.enabled = false;
+            itemImageUI.enabled = true;
+        }
+        public void GetRidOfItemIcon()
+        {
+            itemImageUI.enabled = false;
+            nothingItemImageUI.enabled = true;
         }
         void UpdateFoodText(int food)
         {

@@ -21,6 +21,7 @@ namespace Manager.Task
         {
             taskPointsAdd += taskPoints;
             Debug.Log(taskPoints);
+            IfTaskPointsFull();
             return taskPoints;
         }
         public void IfTaskPointsFull()

@@ -12,7 +12,7 @@ public class BananaQuestObject : MonoBehaviour
     private QuestState newQuestState = QuestState.Success;
     public GameObject bananaObject;
     public string message;
-    public Sprite bananaIcon;
+    public Image bananaIcon;
     public InventoryManager inventoryManager;
     public UIManager uiManager;
     public void OnTriggerEnter(Collider other)

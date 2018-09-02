@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 935899b62f48ae5498594680ed17d133, type: 3}
-  m_Name: NeighbourWoods
+  m_Name: NeighbourWoods (Auto-Backup)
   m_EditorClassIdentifier: 
   version: 
   author: 
@@ -569,7 +569,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Woof
+        value: 'Hi, mister
+
+'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -585,11 +587,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: Woofing
+        value: 
         type: 0
         typeString: 
       - title: Response Menu Sequence
-        value: Final Woof
+        value: 
         type: 0
         typeString: 
       conversationID: 1
@@ -615,8 +617,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 892.9411
-        y: 68.17648
+        x: 792
+        y: 36
         width: 160
         height: 30
     - id: 3
@@ -646,7 +648,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Testing out the dialogue system
+        value: Huh.
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -688,8 +690,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1163.0137
-        y: 115.89041
+        x: 972
+        y: 36
         width: 160
         height: 30
     - id: 4
@@ -719,7 +721,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Woof Woof
+        value: Umm, I said hi.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -761,8 +763,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1428
-        y: 144
+        x: 1152
+        y: 36
         width: 160
         height: 30
     - id: 5
@@ -788,11 +790,11 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: Woof Woof Goodday
+        value: 
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: I fish want.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -822,6 +824,79 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 1
+        originDialogueID: 5
+        destinationConversationID: 1
+        destinationDialogueID: 6
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 1332
+        y: 36
+        width: 160
+        height: 30
+    - id: 6
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: But I don't have fish.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
       userScript: 
@@ -832,8 +907,8 @@ MonoBehaviour:
           Culture=neutral, PublicKeyToken=null
       canvasRect:
         serializedVersion: 2
-        x: 1691.0137
-        y: 163.89041
+        x: 1512
+        y: 36
         width: 160
         height: 30
     canvasScrollPosition: {x: 489.95795, y: 0}
@@ -1312,8 +1387,8 @@ MonoBehaviour:
         y: 240
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.3400004
+    canvasScrollPosition: {x: 247.65146, y: 91.136}
+    canvasZoom: 0.7300002
   - id: 4
     fields:
     - title: Title
@@ -1563,7 +1638,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: SendMessage(UpdateTime,,GameManager);
+        value: SendMessage(UpdateTimeToMorning,,GameManager);
         type: 0
         typeString: 
       conversationID: 4
@@ -1630,7 +1705,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(UpdateTimeToMidday,,GameManager);
         type: 0
         typeString: 
       conversationID: 4
@@ -1697,7 +1772,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
-        value: 
+        value: SendMessage(UpdateTimeToAfternoon,,GameManager);
         type: 0
         typeString: CustomFieldType_Text
       - title: Response Menu Sequence
@@ -1779,7 +1854,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: SendMessage(UpdateTimeToEvening,,GameManager);
         type: 0
         typeString: 
       conversationID: 4
@@ -1803,7 +1878,7 @@ MonoBehaviour:
         y: 144
         width: 160
         height: 30
-    canvasScrollPosition: {x: 7.692322, y: 32.5326}
+    canvasScrollPosition: {x: 142.85718, y: 3.961174}
     canvasZoom: 0.9100001
   - id: 5
     fields:
@@ -1953,7 +2028,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Can you please get the banana for me, it's on the other side of town
+        value: Can you please get the banana for me, it's on the other side of town.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2032,7 +2107,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Thanks for the Banana!
+        value: Thanks for the Banana! For your troubles i'm going to give you a reward.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2105,7 +2180,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I'll Get it for you Sir
+        value: I'll get it for you, Sir.
         type: 0
         typeString: 
       - title: Parenthetical
@@ -2131,7 +2206,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 3
+        destinationConversationID: 5
+        destinationDialogueID: 6
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: SetQuestState("BananaQuest", "active")
       onExecute:
@@ -2198,7 +2279,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 5
+        originDialogueID: 4
+        destinationConversationID: 5
+        destinationDialogueID: 7
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -2267,7 +2354,9 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: 'SendMessage(AddFood,2,InventoryManager);
+
+        Variable["Food"] = Variable ["Food"] + 2'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2279,8 +2368,142 @@ MonoBehaviour:
         y: 168
         width: 160
         height: 30
-    canvasScrollPosition: {x: 151.21777, y: 54.26949}
-    canvasZoom: 1.0400009
+    - id: 6
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Thank you very much!
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 312
+        y: 252
+        width: 160
+        height: 30
+    - id: 7
+      fields:
+      - title: Title
+        value: New Dialogue Entry
+        type: 0
+        typeString: 
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Ohh, maybe netx time.
+        type: 0
+        typeString: 
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: 
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 5
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+        m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      canvasRect:
+        serializedVersion: 2
+        x: 648
+        y: 252
+        width: 160
+        height: 30
+    canvasScrollPosition: {x: 0, y: 80.8822}
+    canvasZoom: 0.68000126
   syncInfo:
     syncActors: 0
     syncItems: 0

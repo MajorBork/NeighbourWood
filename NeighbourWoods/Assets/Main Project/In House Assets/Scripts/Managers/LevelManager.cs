@@ -177,7 +177,7 @@ namespace Manager.Level
         {
             GameEvents.OnTimeChange -= OnTimeChange;
         }
-        void OnTimeChange(TimeSlot timeSlot, Day day)
+        public void OnTimeChange(TimeSlot timeSlot, Day day)
         {
             if (timeSlot == TimeSlot.MORNING)
             {
