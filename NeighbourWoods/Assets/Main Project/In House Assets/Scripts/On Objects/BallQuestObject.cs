@@ -10,6 +10,7 @@ public class BallQuestObject : MonoBehaviour
     private string questTitle = "BallQuest";
     private string inventoryManagerMethodUpdateItemIcon = "UpdateItemIcon";
     private QuestState newQuestState = QuestState.Success;
+    private QuestState currentQuestState = QuestState.Active;
     public GameObject ballObject;
     public string message;
     public Image ballIcon;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using EasyEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Manager.Task;
 //using Manager.Player;
 //using PixelCrushers.DialogueSystem;
@@ -93,6 +94,7 @@ namespace Manager.Level
         {
             timeSlot = TimeSlot.MORNING;
             day = Day.DAY_1;
+            OnTimeChange(timeSlot,day);
         }
         void Update() // Update is called once per frame
         {
@@ -107,6 +109,10 @@ namespace Manager.Level
             {
                 day++;    
                 timeSlot = TimeSlot.MORNING;
+                if ((int)day == 2)
+                {
+                    SceneManager.LoadScene("OverworldScene");
+                }
                 if ((int)day == 7)
                 {
                     //make gameevent reportgameover 
@@ -125,7 +131,7 @@ namespace Manager.Level
             {
                 return;
             }
-            if (timeSlot == TimeSlot.MIDDAY && timeSlot == TimeSlot.AFTERNOON && timeSlot == TimeSlot.EVENING)
+            if (timeSlot == TimeSlot.MIDDAY || timeSlot == TimeSlot.AFTERNOON || timeSlot == TimeSlot.EVENING)
             {
                 timeSlot = TimeSlot.MORNING;
             }
@@ -137,7 +143,7 @@ namespace Manager.Level
             {
                 return;
             }
-            if (timeSlot == TimeSlot.MORNING && timeSlot == TimeSlot.AFTERNOON && timeSlot == TimeSlot.EVENING)
+            if (timeSlot == TimeSlot.MORNING || timeSlot == TimeSlot.AFTERNOON || timeSlot == TimeSlot.EVENING)
             {
                 timeSlot = TimeSlot.MIDDAY;
             }
@@ -149,7 +155,7 @@ namespace Manager.Level
             {
                 return;
             }
-            if (timeSlot == TimeSlot.MORNING && timeSlot == TimeSlot.MIDDAY && timeSlot == TimeSlot.EVENING)
+            if (timeSlot == TimeSlot.MORNING || timeSlot == TimeSlot.MIDDAY || timeSlot == TimeSlot.EVENING)
             {
                 timeSlot = TimeSlot.AFTERNOON;
             }
@@ -161,7 +167,7 @@ namespace Manager.Level
             {
                 return;
             }
-            if (timeSlot == TimeSlot.MORNING && timeSlot == TimeSlot.MIDDAY && timeSlot == TimeSlot.AFTERNOON)
+            if (timeSlot == TimeSlot.MORNING || timeSlot == TimeSlot.MIDDAY || timeSlot == TimeSlot.AFTERNOON)
             {
                 timeSlot = TimeSlot.EVENING;
             }
@@ -202,11 +208,11 @@ namespace Manager.Level
             {
                 foreach (GameObject morningObject in morningObjects)
                 {
-                    morningObject.SetActive(true); // to change into turning off visual components because characters need to be updated when not visualable but for prototype it will do
+                    morningObject.SetActive(false); // to change into turning off visual components because characters need to be updated when not visualable but for prototype it will do
                 }
                 foreach (GameObject middayObject in middayObjects)
                 {
-                    middayObject.SetActive(false);
+                    middayObject.SetActive(true);
                 }
                 foreach (GameObject afternoonObject in afternoonObjects)
                 {

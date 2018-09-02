@@ -24,7 +24,7 @@ namespace Manager.Inventory
         public bool inventoryShowing;
         public bool hasItem;
         public string uiManagerMethod = "UpdateFoodText";
-        public int masterFood;
+        public string masterFood;
         void Start() // Use this for initialization
         {
             inventoryShowing = false;
@@ -35,14 +35,14 @@ namespace Manager.Inventory
             
         }
         #region Food Methods
-        public void AddFood(int food)
+        public void AddFood(string food)
         {
-            food =+ masterFood;
+            food = masterFood;
             SendMessage(uiManagerMethod,masterFood);
         }
-        public void MinusFood(int food)
+        public void MinusFood(string food)
         {
-            food =-masterFood;
+            food = masterFood;
             SendMessage(uiManagerMethod, masterFood);
         }
         #endregion
